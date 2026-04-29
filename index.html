@@ -1747,12 +1747,37 @@
     CrossAware
   </div>
   <div class="footer-note" data-i18n="footer_copy">© 2026 CrossAware. Made in Riga 🇱🇻</div>
+  <div style="font-size:12px;color:rgba(255,255,255,0.3);text-align:center;margin-top:6px;">All rights reserved to DAGAR Ltd · <a href="mailto:hello@crossaware.com" style="color:rgba(255,255,255,0.4);text-decoration:none;">hello@crossaware.com</a></div>
   <div class="footer-links">
     <a href="#" data-i18n="footer_privacy">Privacy</a>
-    <a href="#" data-i18n="footer_contact">Contact</a>
+    <a href="#" onclick="document.getElementById('contactModal').style.display='flex';return false;" data-i18n="footer_contact">Contact</a>
     <a href="#" data-i18n="footer_press">Press</a>
   </div>
 </footer>
+
+<!-- Contact Modal -->
+<div id="contactModal" onclick="if(event.target===this)this.style.display='none'" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.7);z-index:9999;align-items:center;justify-content:center;backdrop-filter:blur(6px);">
+  <div style="background:#1a1a2e;border:1px solid rgba(255,255,255,0.1);border-radius:20px;padding:40px 48px;max-width:420px;width:90%;text-align:center;position:relative;">
+    <button onclick="document.getElementById('contactModal').style.display='none'" style="position:absolute;top:16px;right:20px;background:none;border:none;color:rgba(255,255,255,0.4);font-size:22px;cursor:pointer;">✕</button>
+    <div style="font-size:36px;margin-bottom:16px;">👋</div>
+    <h3 style="color:#fff;font-size:22px;font-weight:700;margin-bottom:8px;letter-spacing:-0.5px;" data-i18n="contact_title">Get in touch</h3>
+    <p style="color:rgba(255,255,255,0.45);font-size:14px;margin-bottom:28px;line-height:1.6;" data-i18n="contact_sub">We're happy to answer any questions about CrossAware.</p>
+    <a href="mailto:hello@crossaware.com" style="display:flex;align-items:center;gap:14px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:12px;padding:16px 20px;text-decoration:none;margin-bottom:12px;transition:background 0.2s;" onmouseover="this.style.background='rgba(255,255,255,0.1)'" onmouseout="this.style.background='rgba(255,255,255,0.06)'">
+      <span style="font-size:22px;">✉️</span>
+      <div style="text-align:left;">
+        <div style="font-size:11px;color:rgba(255,255,255,0.35);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:2px;">E-mail</div>
+        <div style="color:#fff;font-size:15px;font-weight:500;">hello@crossaware.com</div>
+      </div>
+    </a>
+    <a href="tel:+37129185303" style="display:flex;align-items:center;gap:14px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:12px;padding:16px 20px;text-decoration:none;transition:background 0.2s;" onmouseover="this.style.background='rgba(255,255,255,0.1)'" onmouseout="this.style.background='rgba(255,255,255,0.06)'">
+      <span style="font-size:22px;">📞</span>
+      <div style="text-align:left;">
+        <div style="font-size:11px;color:rgba(255,255,255,0.35);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:2px;">Telefons</div>
+        <div style="color:#fff;font-size:15px;font-weight:500;">+371 29 185 303</div>
+      </div>
+    </a>
+  </div>
+</div>
 
 <script>
   // ── i18n translations ──────────────────────────────────────────────────────
@@ -1858,6 +1883,8 @@
       footer_copy: '© 2026 CrossAware. Made in Riga 🇱🇻',
       footer_privacy: 'Privacy',
       footer_contact: 'Contact',
+      contact_title: 'Get in touch',
+      contact_sub: 'We\'re happy to answer any questions about CrossAware.',
       footer_press: 'Press',
       parents_label: 'For Parents',
       parents_h2a: 'Keep your kids safe',
@@ -1995,6 +2022,8 @@
       footer_copy: '© 2026 CrossAware. Veidots Rīgā 🇱🇻',
       footer_privacy: 'Privātums',
       footer_contact: 'Kontakti',
+      contact_title: 'Sazinies ar mums',
+      contact_sub: 'Labprāt atbildēsim uz jebkuriem jautājumiem par CrossAware.',
       footer_press: 'Prese',
       parents_label: 'Vecākiem',
       parents_h2a: 'Saglabājiet bērnus drošus',
