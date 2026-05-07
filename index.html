@@ -2121,30 +2121,31 @@
     requestAnimationFrame(tick);
   }
 
-  const WAITLIST_EMAIL = 'hello.crossawer@gmail.com';
+  const FORMSPREE_URL = 'https://formspree.io/f/xaqvbzpa';
 
-  function sendToEmail(email, platform) {
-    // Send via mailto as fallback — opens email client pre-filled
-    const subject = encodeURIComponent('CrossAware Waitlist — New Sign-up');
-    const body = encodeURIComponent(`New waitlist sign-up:\n\nEmail: ${email}\nPlatform: ${platform}\nTime: ${new Date().toLocaleString()}`);
-    const mailto = `mailto:${WAITLIST_EMAIL}?subject=${subject}&body=${body}`;
-    // Silent attempt — create hidden link and click
-    const a = document.createElement('a');
-    a.href = mailto;
-    a.style.display = 'none';
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
+  async function submitToFormspree(email, platform) {
+    try {
+      const res = await fetch(FORMSPREE_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify({ email, platform, _subject: 'CrossAware Waitlist — New Sign-up' })
+      });
+      return res.ok;
+    } catch(e) {
+      return false;
+    }
   }
 
-  function joinWaitlist() {
+  async function joinWaitlist() {
     const email = document.getElementById('emailInput').value.trim();
     if (!email || !email.includes('@')) {
       document.getElementById('emailInput').style.borderColor = '#EF4444';
       return;
     }
     const platformLabel = selectedPlatform === 'both' ? 'Android & iOS' : selectedPlatform === 'ios' ? 'iOS' : 'Android';
-    sendToEmail(email, platformLabel);
+    const btn = document.querySelector('.waitlist-btn');
+    if (btn) { btn.textContent = '⏳...'; btn.disabled = true; }
+    await submitToFormspree(email, platformLabel);
     document.getElementById('emailInput').closest('.waitlist-form').style.display = 'none';
     document.querySelector('.platform-selector').style.display = 'none';
     const msg = document.getElementById('successMsg');
@@ -2154,13 +2155,15 @@
     document.getElementById('counter').textContent = count;
   }
 
-  function joinWaitlist2() {
+  async function joinWaitlist2() {
     const email = document.getElementById('emailInput2').value.trim();
     if (!email || !email.includes('@')) {
       document.getElementById('emailInput2').style.borderColor = '#EF4444';
       return;
     }
-    sendToEmail(email, 'General waitlist');
+    const btn = document.querySelector('#emailInput2 ~ .waitlist-btn') || document.querySelectorAll('.waitlist-btn')[1];
+    if (btn) { btn.textContent = '⏳...'; btn.disabled = true; }
+    await submitToFormspree(email, 'General waitlist');
     const form = document.getElementById('emailInput2').closest('.waitlist-form');
     form.style.display = 'none';
     const msg = document.getElementById('successMsg2');
