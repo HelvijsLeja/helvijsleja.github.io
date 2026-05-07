@@ -1148,10 +1148,12 @@
       <button class="plat-btn" id="platIos" onclick="selectPlatform('ios')" data-i18n="plat_ios">🍎 iOS</button>
       <button class="plat-btn" id="platBoth" onclick="selectPlatform('both')" data-i18n="plat_both">Both</button>
     </div>
-    <div class="waitlist-form" style="margin:8px 0 0;">
-      <input class="waitlist-input" type="email" id="emailInput" placeholder="your@email.com" />
-      <button class="waitlist-btn" onclick="joinWaitlist()" data-i18n="notify_me">Notify Me</button>
-    </div>
+    <form action="https://formspree.io/f/xaqvbzpa" method="POST" class="waitlist-form" style="margin:8px 0 0;" onsubmit="handleSubmit1(event)">
+      <input class="waitlist-input" type="email" name="email" id="emailInput" placeholder="your@email.com" required/>
+      <input type="hidden" name="platform" id="platformInput" value="Android"/>
+      <input type="hidden" name="_subject" value="CrossAware Waitlist — New Sign-up"/>
+      <button type="submit" class="waitlist-btn" data-i18n="notify_me">Notify Me</button>
+    </form>
   </div>
   <div class="success-msg" id="successMsg">✅ You're on the list! We'll be in touch.</div>
   <p class="waitlist-note" style="animation:fadeUp 0.6s 0.35s ease both;" data-i18n="waitlist_note">No spam. Just a ping when we launch. 🇱🇻 Built in Riga.</p>
@@ -1731,10 +1733,12 @@
     <h2 class="reveal"><span data-i18n="cta_h2a">Be first to know</span><br/><span data-i18n="cta_h2b" style="color:var(--muted)">when we launch.</span></h2>
     <p class="reveal" data-i18n="cta_sub">Free for early users. Android first. Riga first.</p>
 
-    <div class="waitlist-form reveal" style="margin:0 auto 20px">
-      <input class="waitlist-input" type="email" id="emailInput2" placeholder="your@email.com" />
-      <button class="waitlist-btn" onclick="joinWaitlist2()" data-i18n="join_waitlist">Join Waitlist</button>
-    </div>
+    <form action="https://formspree.io/f/xaqvbzpa" method="POST" class="waitlist-form reveal" style="margin:0 auto 20px" onsubmit="handleSubmit2(event)">
+      <input class="waitlist-input" type="email" name="email" id="emailInput2" placeholder="your@email.com" required/>
+      <input type="hidden" name="platform" value="General waitlist"/>
+      <input type="hidden" name="_subject" value="CrossAware Waitlist — New Sign-up"/>
+      <button type="submit" class="waitlist-btn" data-i18n="join_waitlist">Join Waitlist</button>
+    </form>
     <div class="success-msg" id="successMsg2" style="margin:0 auto 20px"></div>
     <p class="waitlist-note reveal" data-i18n="privacy_note">No spam. Just a launch ping. 🔒 Private by design.</p>
   </div>
@@ -2121,56 +2125,51 @@
     requestAnimationFrame(tick);
   }
 
-  const FORMSPREE_URL = 'https://formspree.io/f/xaqvbzpa';
-
-  async function submitToFormspree(email, platform) {
-    try {
-      const res = await fetch(FORMSPREE_URL, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-        body: JSON.stringify({ email, platform, _subject: 'CrossAware Waitlist — New Sign-up' })
-      });
-      return res.ok;
-    } catch(e) {
-      return false;
-    }
-  }
-
-  async function joinWaitlist() {
+  function handleSubmit1(e) {
+    e.preventDefault();
+    const form = e.target;
     const email = document.getElementById('emailInput').value.trim();
     if (!email || !email.includes('@')) {
       document.getElementById('emailInput').style.borderColor = '#EF4444';
       return;
     }
     const platformLabel = selectedPlatform === 'both' ? 'Android & iOS' : selectedPlatform === 'ios' ? 'iOS' : 'Android';
-    const btn = document.querySelector('.waitlist-btn');
-    if (btn) { btn.textContent = '⏳...'; btn.disabled = true; }
-    await submitToFormspree(email, platformLabel);
-    document.getElementById('emailInput').closest('.waitlist-form').style.display = 'none';
-    document.querySelector('.platform-selector').style.display = 'none';
-    const msg = document.getElementById('successMsg');
-    msg.textContent = `✅ You're on the ${platformLabel} waitlist! We'll be in touch.`;
-    msg.style.display = 'block';
-    count++;
-    document.getElementById('counter').textContent = count;
+    document.getElementById('platformInput').value = platformLabel;
+    fetch(form.action, {
+      method: 'POST',
+      headers: { 'Accept': 'application/json' },
+      body: new FormData(form)
+    }).then(r => {
+      form.style.display = 'none';
+      document.querySelector('.platform-selector').style.display = 'none';
+      const msg = document.getElementById('successMsg');
+      msg.textContent = `✅ You're on the ${platformLabel} waitlist! We'll be in touch.`;
+      msg.style.display = 'block';
+      count++;
+      document.getElementById('counter').textContent = count;
+    });
   }
 
-  async function joinWaitlist2() {
+  function handleSubmit2(e) {
+    e.preventDefault();
+    const form = e.target;
     const email = document.getElementById('emailInput2').value.trim();
     if (!email || !email.includes('@')) {
       document.getElementById('emailInput2').style.borderColor = '#EF4444';
       return;
     }
-    const btn = document.querySelector('#emailInput2 ~ .waitlist-btn') || document.querySelectorAll('.waitlist-btn')[1];
-    if (btn) { btn.textContent = '⏳...'; btn.disabled = true; }
-    await submitToFormspree(email, 'General waitlist');
-    const form = document.getElementById('emailInput2').closest('.waitlist-form');
-    form.style.display = 'none';
-    const msg = document.getElementById('successMsg2');
-    msg.style.display = 'block';
-    msg.textContent = "✅ You're on the list! We'll notify you at launch.";
-    count++;
-    document.getElementById('counter').textContent = count;
+    fetch(form.action, {
+      method: 'POST',
+      headers: { 'Accept': 'application/json' },
+      body: new FormData(form)
+    }).then(r => {
+      form.style.display = 'none';
+      const msg = document.getElementById('successMsg2');
+      msg.style.display = 'block';
+      msg.textContent = "✅ You're on the list! We'll notify you at launch.";
+      count++;
+      document.getElementById('counter').textContent = count;
+    });
   }
 
   // ── Phone mockup animation ─────────────────────────────────────────────────
