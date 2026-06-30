@@ -1744,6 +1744,59 @@
   </div>
 </section>
 
+<!-- Privacy Policy Modal -->
+<div id="privacyModal" onclick="if(event.target===this)this.style.display='none'" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.7);z-index:9999;align-items:center;justify-content:center;backdrop-filter:blur(6px);padding:24px;">
+  <div style="background:#1a1a2e;border:1px solid rgba(255,255,255,0.1);border-radius:20px;padding:40px 48px;max-width:680px;width:100%;max-height:80vh;overflow-y:auto;position:relative;">
+    <button onclick="document.getElementById('privacyModal').style.display='none'" style="position:sticky;top:0;float:right;background:none;border:none;color:rgba(255,255,255,0.4);font-size:22px;cursor:pointer;">✕</button>
+  <div class="section-label">Legal</div>
+  <h2 style="margin-bottom:8px;">Privacy Policy</h2>
+  <p style="color:rgba(255,255,255,0.3);font-size:13px;margin-bottom:40px;">Last updated: June 30, 2026</p>
+
+  <p style="color:var(--muted);font-weight:300;margin-bottom:24px;">CrossAware ("we", "our", "the app") is a personal safety application that helps users — including children under parental supervision — stay aware of nearby hazards such as railway crossings and other danger zones. This Privacy Policy explains what information we collect, how we use it, and the choices you have.</p>
+
+  <h3 style="font-family:'Syne',sans-serif;font-size:18px;margin:32px 0 12px;border-bottom:1px solid var(--border);padding-bottom:8px;">Information We Collect</h3>
+  <ul style="color:var(--muted);font-weight:300;margin-left:22px;">
+    <li style="margin-bottom:8px;"><strong style="color:var(--text);">Location data:</strong> CrossAware uses your device's precise GPS location, including while the app is running in the background, to detect when you enter or leave a designated danger zone and to alert you. Location is processed locally on your device and may be stored in our backend (Supabase) to support zone tracking and activity history.</li>
+    <li style="margin-bottom:8px;"><strong style="color:var(--text);">Account information:</strong> If you create an account, we collect the email address and authentication data you provide.</li>
+    <li style="margin-bottom:8px;"><strong style="color:var(--text);">Activity logs:</strong> Records of danger zone entries/exits and hazard reports you submit, used to provide the activity log and statistics features.</li>
+    <li style="margin-bottom:8px;"><strong style="color:var(--text);">Device and notification tokens:</strong> Used to deliver push and local notifications (e.g. hazard alerts).</li>
+  </ul>
+
+  <h3 style="font-family:'Syne',sans-serif;font-size:18px;margin:32px 0 12px;border-bottom:1px solid var(--border);padding-bottom:8px;">How We Use Information</h3>
+  <ul style="color:var(--muted);font-weight:300;margin-left:22px;">
+    <li style="margin-bottom:8px;">To detect proximity to known hazards and send real-time safety alerts.</li>
+    <li style="margin-bottom:8px;">To maintain an offline-first, up-to-date map of danger zones (sourced in part from OpenStreetMap/Overpass data).</li>
+    <li style="margin-bottom:8px;">To support optional parental control features (PIN-protected safety mode), which are stored only on the device and not shared with us.</li>
+    <li style="margin-bottom:8px;">To improve app reliability and respond to support requests.</li>
+  </ul>
+
+  <h3 style="font-family:'Syne',sans-serif;font-size:18px;margin:32px 0 12px;border-bottom:1px solid var(--border);padding-bottom:8px;">Data Sharing</h3>
+  <p style="color:var(--muted);font-weight:300;">We do not sell your personal data. Location and account data are processed by our backend infrastructure provider (Supabase) solely to operate the app's core safety features. We do not share your data with advertisers or other third parties for marketing purposes.</p>
+
+  <h3 style="font-family:'Syne',sans-serif;font-size:18px;margin:32px 0 12px;border-bottom:1px solid var(--border);padding-bottom:8px;">Background Location</h3>
+  <p style="color:var(--muted);font-weight:300;">CrossAware requests background location access specifically to continue monitoring danger zones while the app is minimized, so that safety alerts are not missed. This tracking runs via a visible foreground notification while active and can be disabled at any time in the app's Settings, except where restricted by an active parental lock.</p>
+
+  <h3 style="font-family:'Syne',sans-serif;font-size:18px;margin:32px 0 12px;border-bottom:1px solid var(--border);padding-bottom:8px;">Children's Privacy / Parental Controls</h3>
+  <p style="color:var(--muted);font-weight:300;">CrossAware includes an optional parental PIN lock designed to prevent a child from disabling safety monitoring. This PIN is stored locally on the device only. CrossAware is intended to be set up and supervised by a parent or guardian on behalf of a minor; we do not knowingly collect more personal information from children than is necessary to provide the safety features described above.</p>
+
+  <h3 style="font-family:'Syne',sans-serif;font-size:18px;margin:32px 0 12px;border-bottom:1px solid var(--border);padding-bottom:8px;">Data Retention</h3>
+  <p style="color:var(--muted);font-weight:300;">Account and activity data are retained for as long as your account is active. You may request deletion of your account and associated data at any time by contacting us at the email below.</p>
+
+  <h3 style="font-family:'Syne',sans-serif;font-size:18px;margin:32px 0 12px;border-bottom:1px solid var(--border);padding-bottom:8px;">Your Choices</h3>
+  <ul style="color:var(--muted);font-weight:300;margin-left:22px;">
+    <li style="margin-bottom:8px;">You can disable location permissions at any time via your device settings, which will stop danger zone monitoring.</li>
+    <li style="margin-bottom:8px;">You can disable push notifications via your device settings.</li>
+    <li style="margin-bottom:8px;">You can request access to, correction of, or deletion of your personal data by contacting us.</li>
+  </ul>
+
+  <h3 style="font-family:'Syne',sans-serif;font-size:18px;margin:32px 0 12px;border-bottom:1px solid var(--border);padding-bottom:8px;">Changes to This Policy</h3>
+  <p style="color:var(--muted);font-weight:300;">We may update this Privacy Policy from time to time. Material changes will be reflected by updating the "Last updated" date above.</p>
+
+  <h3 style="font-family:'Syne',sans-serif;font-size:18px;margin:32px 0 12px;border-bottom:1px solid var(--border);padding-bottom:8px;">Contact Us</h3>
+  <p style="color:var(--muted);font-weight:300;">If you have questions about this Privacy Policy or your data, contact us at: <a href="mailto:hello@crossaware.com" style="color:var(--green);">hello@crossaware.com</a></p>
+  </div>
+</div>
+
 <!-- Footer -->
 <footer>
   <div class="logo" style="font-size:16px">
@@ -1753,7 +1806,7 @@
   <div class="footer-note" data-i18n="footer_copy">© 2026 CrossAware. Made in Riga 🇱🇻</div>
   <div style="font-size:12px;color:rgba(255,255,255,0.3);text-align:center;margin-top:6px;">All rights reserved to DAGAR Ltd · <a href="mailto:hello@crossaware.com" style="color:rgba(255,255,255,0.4);text-decoration:none;">hello@crossaware.com</a></div>
   <div class="footer-links">
-    <a href="#" data-i18n="footer_privacy">Privacy</a>
+    <a href="#" onclick="document.getElementById('privacyModal').style.display='flex';return false;" data-i18n="footer_privacy">Privacy</a>
     <a href="#" onclick="document.getElementById('contactModal').style.display='flex';return false;" data-i18n="footer_contact">Contact</a>
     <a href="#" data-i18n="footer_press">Press</a>
   </div>
