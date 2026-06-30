@@ -2323,6 +2323,15 @@
   // Start immediately and repeat every 6s to match SVG animation
   runBannerCycle();
   setInterval(runBannerCycle, 6000);
+
+  // Auto-open Privacy Policy modal when linked via #privacy (e.g. from Play Store)
+  function checkPrivacyHash() {
+    if (window.location.hash === '#privacy') {
+      document.getElementById('privacyModal').style.display = 'flex';
+    }
+  }
+  checkPrivacyHash();
+  window.addEventListener('hashchange', checkPrivacyHash);
 </script>
 
 </body>
