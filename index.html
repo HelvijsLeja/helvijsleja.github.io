@@ -166,7 +166,7 @@
 
   /* ── Language switcher ── */
   .lang-switcher { display:flex; background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.07); border-radius:100px; padding:3px; gap:2px; }
-  .lang-btn { padding:5px 12px; border:none; border-radius:100px; background:transparent; color:#6B7280; font-family:'DM Sans',sans-serif; font-size:13px; font-weight:600; cursor:pointer; transition:all 0.2s; letter-spacing:0.03em; }
+  .lang-btn { padding:10px 16px; min-height:44px; border:none; border-radius:100px; background:transparent; color:#6B7280; font-family:'DM Sans',sans-serif; font-size:13px; font-weight:600; cursor:pointer; transition:all 0.2s; letter-spacing:0.03em; }
   .lang-btn.active { background:#2563EB; color:#fff; box-shadow:0 2px 8px rgba(37,99,235,0.35); }
   .lang-btn:hover:not(.active) { color:#fff; }
 
@@ -227,7 +227,8 @@
 
   .plat-btn {
     flex: 1;
-    padding: 8px 12px;
+    padding: 12px;
+    min-height: 44px; /* Apple HIG minimum tap target */
     border: none;
     border-radius: 100px;
     background: transparent;
@@ -510,7 +511,7 @@
     padding: 14px 20px;
     border-radius: 100px;
     font-family: 'DM Sans', sans-serif;
-    font-size: 15px;
+    font-size: 16px; /* ≥16px prevents iOS Safari auto-zoom on focus */
     outline: none;
     transition: border-color 0.2s;
   }
@@ -840,8 +841,12 @@
   @media (max-width: 768px) {
     .problem-grid { grid-template-columns: 1fr; gap: 40px; }
     .waitlist-form { flex-direction: column; }
+    .waitlist-btn { width: 100%; min-height: 48px; } /* full-width CTA on mobile */
     nav { padding: 16px 20px; }
     .steps { grid-template-columns: 1fr; }
+    /* Constrain decorative glows so scrollWidth never exceeds viewport */
+    .hero::after { width: 100vw; height: 100vw; }
+    .final-cta::before { width: 100vw; height: 60vw; }
   }
 
   .stat-big {
@@ -1059,6 +1064,9 @@
     text-decoration: none;
     font-size: 13px;
     transition: color 0.2s;
+    display: inline-block;
+    padding: 12px 8px;   /* enlarged tap area for mobile (44px total) */
+    margin: -12px -8px;  /* keeps visual layout unchanged */
   }
   .footer-links a:hover { color: #fff; }
 
@@ -1804,7 +1812,7 @@
     CrossAware
   </div>
   <div class="footer-note" data-i18n="footer_copy">© 2026 CrossAware. Made in Riga 🇱🇻</div>
-  <div style="font-size:12px;color:rgba(255,255,255,0.3);text-align:center;margin-top:6px;">All rights reserved to DAGAR Ltd · <a href="mailto:hello@crossaware.com" style="color:rgba(255,255,255,0.4);text-decoration:none;">hello@crossaware.com</a></div>
+  <div style="font-size:12px;color:rgba(255,255,255,0.3);text-align:center;margin-top:6px;">All rights reserved to DAGAR Ltd · <a href="mailto:hello@crossaware.com" style="color:rgba(255,255,255,0.4);text-decoration:none;display:inline-block;padding:12px 6px;margin:-12px -6px;">hello@crossaware.com</a></div>
   <div class="footer-links">
     <a href="#" onclick="document.getElementById('privacyModal').style.display='flex';return false;" data-i18n="footer_privacy">Privacy</a>
     <a href="#" onclick="document.getElementById('contactModal').style.display='flex';return false;" data-i18n="footer_contact">Contact</a>
