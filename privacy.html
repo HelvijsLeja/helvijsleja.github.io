@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — CrossAware</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+<style>
+  :root{--navy:#0D1B2A;--navy2:#0A1521;--teal:#00C9A7;--blue:#2563EB;--muted:#9CA3AF;--dim:#6B7280;--border:rgba(255,255,255,0.1)}
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:var(--navy2);color:#E5E7EB;font-family:'DM Sans',sans-serif;font-size:16px;line-height:1.75}
+  nav{display:flex;align-items:center;justify-content:space-between;padding:20px 24px;max-width:860px;margin:0 auto}
+  .logo{display:flex;align-items:center;gap:8px;font-family:'Syne',sans-serif;font-weight:800;font-size:19px;color:#fff;text-decoration:none}
+  .logo .dot{width:8px;height:8px;border-radius:50%;background:var(--teal)}
+  nav a.back{color:var(--teal);text-decoration:none;font-size:14px;padding:10px 16px;border:1px solid rgba(0,201,167,0.3);border-radius:100px}
+  main{max-width:760px;margin:0 auto;padding:24px 24px 80px}
+  h1{font-family:'Syne',sans-serif;font-size:clamp(28px,5vw,38px);font-weight:800;color:#fff;letter-spacing:-0.02em;margin:24px 0 8px}
+  .meta{color:var(--dim);font-size:14px;margin-bottom:36px}
+  .tldr{background:rgba(0,201,167,0.08);border:1px solid rgba(0,201,167,0.3);border-radius:16px;padding:20px 22px;margin-bottom:36px}
+  .tldr b{color:var(--teal)}
+  h2{font-family:'Syne',sans-serif;font-size:21px;font-weight:700;color:#fff;margin:36px 0 12px}
+  p{color:var(--muted);margin-bottom:14px}
+  ul{margin:0 0 14px 22px;color:var(--muted)}
+  li{margin-bottom:8px}
+  b,strong{color:#D1D5DB}
+  a{color:var(--teal)}
+  table{width:100%;border-collapse:collapse;margin:16px 0 20px;font-size:14px}
+  th{background:rgba(255,255,255,0.06);color:#fff;text-align:left;padding:10px 12px;border:1px solid var(--border)}
+  td{padding:10px 12px;border:1px solid var(--border);color:var(--muted);vertical-align:top}
+  .warn{background:rgba(239,68,68,0.08);border:1px solid rgba(239,68,68,0.4);border-radius:16px;padding:20px 22px;margin:20px 0}
+  .warn b{color:#FCA5A5}
+  footer{border-top:1px solid var(--border);padding:24px;text-align:center;color:var(--dim);font-size:13px}
+  footer a{color:var(--dim)}
+  @media(max-width:640px){table{font-size:12.5px}th,td{padding:8px}}
+</style>
+
+</head>
+<body>
+<nav>
+  <a class="logo" href="/"><span class="dot"></span>CrossAware</a>
+  <a class="back" href="/">← Back to crossaware.com</a>
+</nav>
+<main>
+  <h1>Privacy Policy</h1>
+  <div class="meta">DAGAR Ltd (SIA) · Riga, Latvia · Version 1.0 · Effective 15 July 2026 · Contact: <a href="mailto:hello@crossaware.com">hello@crossaware.com</a></div>
+
+  <div class="tldr"><b>The short version:</b> your location never leaves your phone. CrossAware detects danger zones and lowers your media volume entirely on your device. On our servers we keep only your account e-mail and anonymous safety statistics — never your GPS trail.</div>
+
+  <h2>1. Who we are</h2>
+  <p>CrossAware is a safety application operated by <b>DAGAR Ltd (SIA)</b>, a company registered in Riga, Latvia. We are the data controller for the personal data described in this policy. For any privacy question or request, write to <a href="mailto:hello@crossaware.com">hello@crossaware.com</a>.</p>
+
+  <h2>2. What data we collect — and what we deliberately don't</h2>
+  <p>CrossAware is built on a privacy-by-design principle: the app's core function — comparing your position against our danger-zone database (railway crossings and dangerous intersections in Riga) and reducing media volume — runs <b>entirely on your device</b>. Because of this architecture, we collect far less than a typical location app:</p>
+  <table>
+    <tr><th>Data</th><th>Where it is stored</th><th>Why we need it</th><th>How long we keep it</th></tr>
+    <tr><td>Account e-mail and an encrypted (hashed) password</td><td>Supabase database, hosted in the EU</td><td>Sign-in and subscription management</td><td>Until you delete your account, plus 30 days in backups</td></tr>
+    <tr><td>Real-time GPS position</td><td><b>Your device only — never uploaded</b></td><td>Detecting proximity to danger zones</td><td>Not stored; processed in memory and discarded</td></tr>
+    <tr><td>Anonymous usage events (which mapped zone triggered an alert, and when — with no coordinate trail and no identity attached)</td><td>Supabase analytics tables (EU)</td><td>Measuring that the product works and pruning zones that produce false alarms</td><td>24 months, then aggregated into statistics</td></tr>
+    <tr><td>Waitlist e-mail (if you signed up on crossaware.com)</td><td>Website form provider</td><td>One launch notification</td><td>Deleted after the launch campaign, or immediately on request</td></tr>
+    <tr><td>Payment details</td><td>Stripe (PCI-DSS certified processor)</td><td>Paid subscriptions</td><td>Per Stripe's policy — we never see or store your card number</td></tr>
+  </table>
+  <p><b>We do not collect:</b> your continuous location or movement history, your name, your contacts, microphone or camera data, or any advertising identifiers. The background location permission Android asks for is used exclusively on your device — it does not mean your location is sent to us.</p>
+
+  <h2>3. How we store and protect your data</h2>
+  <ul>
+    <li><b>Encryption:</b> all traffic between the app, the website and our servers uses TLS; data in our Supabase database is encrypted at rest.</li>
+    <li><b>Access control:</b> production database access is restricted to the founder, protected by strong credentials and two-factor authentication on all critical services (Supabase, GitHub, Google Workspace).</li>
+    <li><b>Minimization:</b> if a feature does not strictly need a data point, we do not collect it — the table above is the complete list.</li>
+    <li><b>Processors:</b> we use Supabase (database, EU region), Stripe (payments) and GitHub Pages (this website). Each operates under its standard GDPR data-processing agreement.</li>
+    <li><b>Breach response:</b> in the unlikely event personal data is compromised, we will notify the Latvian Data State Inspectorate (DVI) within 72 hours as required by GDPR Article 33, and inform affected users without undue delay.</li>
+  </ul>
+
+  <h2>4. Legal bases for processing (GDPR Article 6)</h2>
+  <p>We process account data to <b>perform our contract</b> with you (providing the safety service). We process anonymous usage events under our <b>legitimate interest</b> in keeping the danger-zone database accurate and the product functional. We send the waitlist launch e-mail based on your <b>consent</b>, which you can withdraw at any time by replying "unsubscribe".</p>
+
+  <h2>5. Your rights, including deletion</h2>
+  <p>Under the GDPR you have the right to access, correct, delete or export your personal data, to restrict or object to its processing, and to withdraw consent. <b>To request deletion:</b> use "Delete account" inside the app, or e-mail <a href="mailto:hello@crossaware.com">hello@crossaware.com</a> from your registered address — we confirm and complete deletion within 30 days, including backups within a further 30 days. You may also lodge a complaint with the Latvian Data State Inspectorate (<a href="https://www.dvi.gov.lv" rel="noopener">dvi.gov.lv</a>) or your local supervisory authority.</p>
+
+  <h2>6. Children</h2>
+  <p>CrossAware is often used by school-age children whose parents purchase the subscription. Users under 16 need a parent's or guardian's consent, which we request during signup (GDPR Article 8). Child accounts follow exactly the same on-device privacy model as adult accounts — we never collect more data from a minor.</p>
+
+  <h2>7. Changes to this policy</h2>
+  <p>We will post any updates on this page. For material changes we will additionally notify you in the app or by e-mail before they take effect.</p>
+</main>
+<footer>CrossAware · <a href="/">crossaware.com</a> · <a href="/terms.html">Terms of Service</a> · <a href="mailto:hello@crossaware.com">hello@crossaware.com</a> · © 2026 DAGAR Ltd (SIA), Riga, Latvia</footer>
+</body>
+</html>
