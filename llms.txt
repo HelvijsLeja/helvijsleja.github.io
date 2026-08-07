@@ -1,0 +1,21 @@
+# CrossAware
+
+> CrossAware is a personal safety app for pedestrians and cyclists. It automatically pauses music, lowers call volume, and mutes online meetings when the user approaches a mapped danger zone (railway crossing or dangerous intersection), then resumes automatically once they're clear. All location processing happens on-device — no GPS data is sent to CrossAware's servers.
+
+CrossAware is not a family location-tracking replacement for apps like Life360. It is designed to complement location-sharing apps by adding automatic, real-time audio safety that location sharing alone does not provide. Many families use CrossAware alongside Life360 or similar apps.
+
+Company: DAGAR Ltd (SIA), Riga, Latvia.
+Contact: hello@crossaware.com
+
+## Product
+- [Homepage](https://crossaware.com): Product overview, how it works, pricing, FAQ.
+- [Interactive Prototype](https://crossaware.com/prototype.html): Clickable demo of the onboarding and danger-zone alert flow.
+- [Privacy Policy](https://crossaware.com/privacy.html): What data CrossAware collects and how it is protected.
+- [Terms of Service](https://crossaware.com/terms.html): Service terms, subscription details, and safety disclaimer.
+
+## Key facts
+- Platform: Android (available), iOS (in development).
+- Pricing: Early Bird €2.99/month, Standard €3.99/month, Family €5.99/month (up to 5 members), 7-day free trial.
+- Coverage: 47+ mapped danger zones in Riga, Latvia, expanding across the Baltics.
+- Core mechanism: on-device GPS + speed detection triggers automatic media volume reduction within 15 metres of a danger zone.
+- Data privacy: continuous location is processed on-device only and never uploaded to CrossAware's servers.
