@@ -68,19 +68,14 @@
   }
   .pdc-title { display: flex; align-items: center; gap: 10px; }
 
-  .pdc-live-badge {
+  .pdc-preview-badge {
     display: flex; align-items: center; gap: 5px;
-    background: rgba(16,185,129,0.12);
-    border: 1px solid rgba(16,185,129,0.25);
-    color: var(--green);
+    background: rgba(245,158,11,0.15);
+    border: 1px solid rgba(245,158,11,0.25);
+    color: var(--amber);
     font-size: 10px; font-weight: 700;
     letter-spacing: 0.08em;
     padding: 4px 10px; border-radius: 100px;
-  }
-  .pdc-live-dot {
-    width: 6px; height: 6px; border-radius: 50%;
-    background: var(--green);
-    animation: pulse-dot 1.5s ease-in-out infinite;
   }
 
   .child-row {
@@ -1341,7 +1336,7 @@
       <div class="step-num">01</div>
       <span class="step-icon">📍</span>
       <h3 data-i18n="step1_title">We track your location</h3>
-      <p data-i18n="step1_body">CrossAware uses GPS to know exactly where you are. All data stays on your phone — nothing is sent to any server.</p>
+      <p data-i18n="step1_body">CrossAware uses GPS to know exactly where you are. Danger zone detection happens right on your device — if you create an account, your activity history is securely stored to power your safety stats.</p>
     </div>
     <div class="step">
       <div class="step-num">02</div>
@@ -1606,6 +1601,7 @@
 <section class="section parents-section">
   <div class="parents-header reveal">
     <div class="section-label" data-i18n="parents_label">For Parents</div>
+    <span class="coming-soon" data-i18n="phase2">Phase 2</span>
     <h2><span data-i18n="parents_h2a">Keep your kids safe</span><br/><em data-i18n="parents_h2b" style="color:var(--green)">on every walk to school.</em></h2>
     <p class="parents-intro" data-i18n="parents_intro">Children are the most vulnerable pedestrians. CrossAware's Parent Dashboard gives you full visibility and control over how your child uses the app — so you can let them walk independently without losing peace of mind.</p>
   </div>
@@ -1623,9 +1619,8 @@
             <div style="font-size:11px;color:#6B7280" data-i18n="pdc_sub">2 children monitored</div>
           </div>
         </div>
-        <div class="pdc-live-badge">
-          <span class="pdc-live-dot"></span>
-          <span data-i18n="pdc_live">LIVE</span>
+        <div class="pdc-preview-badge">
+          <span data-i18n="pdc_live">CONCEPT PREVIEW</span>
         </div>
       </div>
 
@@ -1832,7 +1827,7 @@
       <th style="text-align:center;padding:12px 10px;color:#9CA3AF">Life360</th>
     </tr>
     <tr style="border-bottom:1px solid rgba(255,255,255,0.08)"><td style="padding:12px 10px;color:#D1D5DB">What it does</td><td style="text-align:center;padding:12px 10px">Automatic audio pause at danger zones</td><td style="text-align:center;padding:12px 10px;color:#9CA3AF">Family location sharing &amp; circles</td></tr>
-    <tr style="border-bottom:1px solid rgba(255,255,255,0.08)"><td style="padding:12px 10px;color:#D1D5DB">Location data</td><td style="text-align:center;padding:12px 10px">Stays on your device</td><td style="text-align:center;padding:12px 10px;color:#9CA3AF">Shared with family circle</td></tr>
+    <tr style="border-bottom:1px solid rgba(255,255,255,0.08)"><td style="padding:12px 10px;color:#D1D5DB">Location data</td><td style="text-align:center;padding:12px 10px">Processed on-device, never sold</td><td style="text-align:center;padding:12px 10px;color:#9CA3AF">Shared with family circle</td></tr>
     <tr style="border-bottom:1px solid rgba(255,255,255,0.08)"><td style="padding:12px 10px;color:#D1D5DB">Works solo</td><td style="text-align:center;padding:12px 10px">Yes — no circle needed</td><td style="text-align:center;padding:12px 10px;color:#9CA3AF">Needs family members to join</td></tr>
     <tr><td style="padding:12px 10px;color:#D1D5DB">Best used</td><td style="text-align:center;padding:12px 10px" colspan="2">Together — for both visibility and real-time protection</td></tr>
   </table>
@@ -2005,7 +2000,7 @@
       how_h2a: 'Three steps.',
       how_h2b: 'Zero effort.',
       step1_title: 'We track your location',
-      step1_body: 'CrossAware uses GPS to know exactly where you are. All data stays on your phone — nothing is sent to any server.',
+      step1_body: 'CrossAware uses GPS to know exactly where you are. Danger zone detection happens right on your device — if you create an account, your activity history is securely stored to power your safety stats.',
       step2_title: 'We detect your speed',
       step2_body: 'Walking at 4 km/h? Cycling at 18 km/h? CrossAware classifies your movement and only activates when you\'re on foot or on a bike.',
       step3_title: 'Music pauses automatically',
@@ -2092,7 +2087,7 @@
       parents_intro: "Children are the most vulnerable pedestrians. CrossAware's Parent Dashboard gives you full visibility and control over how your child uses the app — so you can let them walk independently without losing peace of mind.",
       pdc_title: 'Parent Dashboard',
       pdc_sub: '2 children monitored',
-      pdc_live: 'LIVE',
+      pdc_live: 'CONCEPT PREVIEW',
       child1_name: 'Marta, 11',
       child1_status: 'Walking to school · 0.8km away',
       child2_name: 'Toms, 14',
@@ -2150,7 +2145,7 @@
       how_h2a: 'Trīs soļi.',
       how_h2b: 'Nulles piepūle.',
       step1_title: 'Mēs izsekojam jūsu atrašanās vietu',
-      step1_body: 'CrossAware izmanto GPS, lai precīzi zinātu, kur atrodaties. Visi dati paliek jūsu tālrunī — nekas netiek nosūtīts uz serveriem.',
+      step1_body: 'CrossAware izmanto GPS, lai precīzi zinātu, kur atrodaties. Bīstamo zonu noteikšana notiek jūsu ierīcē — ja izveidojat kontu, jūsu aktivitātes vēsture tiek droši glabāta, lai nodrošinātu drošības statistiku.',
       step2_title: 'Mēs nosakām jūsu ātrumu',
       step2_body: 'Ejat 4 km/h? Braucat ar velosipēdu 18 km/h? CrossAware klasificē jūsu kustību un aktivizējas tikai tad, kad esat īsti neaizsargāts.',
       step3_title: 'Mūzika apstājas automātiski',
@@ -2237,7 +2232,7 @@
       parents_intro: 'Bērni ir visvairāk neaizsargātie gājēji. CrossAware vecāku panelis sniedz jums pilnu pārraudzību un kontroli pār to, kā jūsu bērns izmanto lietotni — lai viņi varētu staigāt patstāvīgi, nedodot jums raizes.',
       pdc_title: 'Vecāku panelis',
       pdc_sub: '2 bērni tiek uzraudzīti',
-      pdc_live: 'TIEŠRAIDE',
+      pdc_live: 'KONCEPTA PRIEKŠSKATS',
       child1_name: 'Marta, 11',
       child1_status: 'Iet uz skolu · 0,8 km attālumā',
       child2_name: 'Toms, 14',
