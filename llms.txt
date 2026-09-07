@@ -6,6 +6,7 @@ CrossAware is not a family location-tracking replacement for apps like Life360. 
 
 Company: DAGAR Ltd (SIA), Riga, Latvia.
 Contact: hello@crossaware.com
+Backed by: EIT Urban Mobility (a body of the European Union) and VEFRESH (Latvia's urban mobility innovation ecosystem).
 
 ## Product
 - [Homepage](https://crossaware.com): Product overview, how it works, pricing, FAQ.
