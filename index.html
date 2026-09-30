@@ -20,7 +20,9 @@
 <meta name="twitter:title" content="CrossAware — Safety App for Pedestrians &amp; Cyclists"/>
 <meta name="twitter:description" content="A safety app that turns your music down near railway crossings and dangerous intersections, so you hear approaching trains and traffic."/>
 <meta name="twitter:image" content="https://crossaware.com/og-image.png"/>
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+<link rel="preload" href="/fonts/syne-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/dm-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link href="/fonts/fonts.css" rel="stylesheet">
 <style>
   :root {
     --blue: #2563EB;
@@ -1090,7 +1092,7 @@
       <button class="lang-btn active" id="langEN" onclick="setLang('en')">EN</button>
       <button class="lang-btn" id="langLV" onclick="setLang('lv')">LV</button>
     </div>
-    <a href="#waitlist" class="nav-cta" data-i18n="nav_cta">Join Waitlist</a>
+    <a href="#waitlist" class="nav-cta" data-i18n="nav_cta">Join Android beta</a>
   </div>
 </nav>
 <main>
@@ -1128,14 +1130,14 @@
       <button class="plat-btn" id="platBoth" onclick="selectPlatform('both')" data-i18n="plat_both">Both</button>
     </div>
     <form action="https://formspree.io/f/xaqvbzpa" method="POST" class="waitlist-form" style="margin:8px 0 0;" onsubmit="handleSubmit1(event)">
-      <label class="sr-only" for="emailInput">Email</label><input class="waitlist-input" type="email" name="email" id="emailInput" autocomplete="email" placeholder="your@email.com" required/>
+      <label class="sr-only" for="emailInput">Email</label><input class="waitlist-input" type="email" name="email" id="emailInput" autocomplete="email" placeholder="you@gmail.com" required/>
       <input type="hidden" name="platform" id="platformInput" value="Android"/>
-      <input type="hidden" name="_subject" value="CrossAware Waitlist — New Sign-up"/>
-      <button type="submit" class="waitlist-btn" data-i18n="notify_me">Notify Me</button>
+      <input type="hidden" name="_subject" value="CrossAware Beta — New Sign-up"/>
+      <button type="submit" class="waitlist-btn" data-i18n="notify_me">Sign me up</button>
     </form>
   </div>
-  <div class="success-msg" id="successMsg">✅ You're on the list! We'll be in touch.</div>
-  <p class="waitlist-note" style="animation:fadeUp 0.6s 0.35s ease both;" data-i18n="waitlist_note">DAGAR SIA will use your e-mail only to tell you when CrossAware launches. Collected via Formspree (USA). Unsubscribe anytime. <a href="/privacy.html" style="color:inherit;text-decoration:underline">Privacy Policy</a> · 🇱🇻 Built in Riga.</p>
+  <div class="success-msg" id="successMsg"></div>
+  <p class="waitlist-note" style="animation:fadeUp 0.6s 0.35s ease both;" data-i18n="waitlist_note">Use the e-mail of your Google account. DAGAR SIA will use it only to invite you to the Android beta via Google Play (Google receives it for the tester list) or, for iOS, to e-mail you once at launch. Collected via Formspree (USA). Opt out anytime. <a href="/privacy.html" style="color:inherit;text-decoration:underline">Privacy Policy</a> · 🇱🇻 Built in Riga.</p>
 
   <!-- Phone mockup -->
   <div class="phone-wrap">
@@ -1710,18 +1712,18 @@
 
 <section class="final-cta">
   <div style="position:relative;z-index:1">
-    <div class="section-label reveal" style="text-align:center" data-i18n="cta_label">Early Access</div>
-    <h2 class="reveal"><span data-i18n="cta_h2a">Be first to know</span><br/><span data-i18n="cta_h2b" style="color:var(--muted)">when we launch.</span></h2>
-    <p class="reveal" data-i18n="cta_sub">Free for early users. Android first. Riga first.</p>
+    <div class="section-label reveal" style="text-align:center" data-i18n="cta_label">Android beta</div>
+    <h2 class="reveal"><span data-i18n="cta_h2a">Try it before</span><br/><span data-i18n="cta_h2b" style="color:var(--muted)">everyone else.</span></h2>
+    <p class="reveal" data-i18n="cta_sub">Free during beta. Android now, iOS later. Riga first.</p>
 
     <form action="https://formspree.io/f/xaqvbzpa" method="POST" class="waitlist-form reveal" style="margin:0 auto 20px" onsubmit="handleSubmit2(event)">
-      <label class="sr-only" for="emailInput2">Email</label><input class="waitlist-input" type="email" name="email" id="emailInput2" autocomplete="email" placeholder="your@email.com" required/>
-      <input type="hidden" name="platform" value="General waitlist"/>
-      <input type="hidden" name="_subject" value="CrossAware Waitlist — New Sign-up"/>
-      <button type="submit" class="waitlist-btn" data-i18n="join_waitlist">Join Waitlist</button>
+      <label class="sr-only" for="emailInput2">Email</label><input class="waitlist-input" type="email" name="email" id="emailInput2" autocomplete="email" placeholder="you@gmail.com" required/>
+      <input type="hidden" name="platform" value="Android beta (bottom form)"/>
+      <input type="hidden" name="_subject" value="CrossAware Beta — New Sign-up"/>
+      <button type="submit" class="waitlist-btn" data-i18n="join_waitlist">Join the beta</button>
     </form>
     <div class="success-msg" id="successMsg2" style="margin:0 auto 20px"></div>
-    <p class="waitlist-note reveal" data-i18n="privacy_note">DAGAR SIA will use your e-mail only to tell you when CrossAware launches. Collected via Formspree (USA). Unsubscribe anytime. <a href="/privacy.html" style="color:inherit;text-decoration:underline">Privacy Policy</a></p>
+    <p class="waitlist-note reveal" data-i18n="privacy_note">Use the e-mail of your Google account. DAGAR SIA will use it only to invite you to the Android beta via Google Play (Google receives it for the tester list) or, for iOS, to e-mail you once at launch. Collected via Formspree (USA). Opt out anytime. <a href="/privacy.html" style="color:inherit;text-decoration:underline">Privacy Policy</a></p>
   </div>
 </section>
 
@@ -1789,7 +1791,7 @@
   },
   "parentOrganization": {
     "@type": "Organization",
-    "name": "DAGAR Ltd (SIA)"
+    "name": "DAGAR SIA"
   },
   "funder": {
     "@type": "Organization",
@@ -1908,7 +1910,7 @@
     CrossAware
   </div>
   <div class="footer-note" data-i18n="footer_copy">© 2026 CrossAware. Made in Riga 🇱🇻</div>
-  <div style="font-size:12px;color:rgba(255,255,255,0.3);text-align:center;margin-top:6px;">All rights reserved to DAGAR Ltd · <a href="mailto:hello@crossaware.com" style="color:rgba(255,255,255,0.4);text-decoration:none;display:inline-block;padding:12px 6px;margin:-12px -6px;">hello@crossaware.com</a></div>
+  <div style="font-size:12px;color:rgba(255,255,255,0.3);text-align:center;margin-top:6px;">All rights reserved to DAGAR SIA · <a href="mailto:hello@crossaware.com" style="color:rgba(255,255,255,0.4);text-decoration:none;display:inline-block;padding:12px 6px;margin:-12px -6px;">hello@crossaware.com</a></div>
   <div class="footer-links">
     <a href="/privacy.html" data-i18n="footer_privacy">Privacy</a>
     <a href="/terms.html" data-i18n="footer_terms">Terms</a>
@@ -1974,7 +1976,7 @@
       faq_a3: "GPS trackers and family-locator apps are designed to show where a child is. CrossAware adds a different layer: it automatically lowers media volume and gives a voice alert near danger zones, so a child can hear what's coming. Parents can use it alongside a GPS tracker.",
       faq_q4: 'Is there a Findmykids (Pingo) alternative?',
       faq_a4: "If you already use Findmykids (Pingo) to see your child's location, CrossAware isn't a replacement — it's a different kind of tool. Findmykids is designed to show where your child is on the map; CrossAware automatically lowers their media volume and gives a voice alert as they approach a danger zone, so they can hear a train or car coming. The two can be used side by side.",
-      nav_cta: 'Join Waitlist',
+      nav_cta: "Join Android beta",
       hero_badge: "Android beta testing now · iOS planned · Riga, Latvia",
       hero_h1a: 'Walk. Ride.',
       hero_h1b: 'Listen Safely.',
@@ -1984,8 +1986,8 @@
       plat_android: '🤖 Android',
       plat_ios: '🍎 iOS',
       plat_both: 'Both',
-      notify_me: 'Notify Me',
-      waitlist_note: "DAGAR SIA will use your e-mail only to tell you when CrossAware launches. Collected via Formspree (USA). Unsubscribe anytime. <a href=\"/privacy.html\" style=\"color:inherit;text-decoration:underline\">Privacy Policy</a> · 🇱🇻 Built in Riga.",
+      notify_me: "Sign me up",
+      waitlist_note: "Use the e-mail of your Google account. DAGAR SIA will use it only to invite you to the Android beta via Google Play (Google receives it for the tester list) or, for iOS, to e-mail you once at launch. Collected via Formspree (USA). Opt out anytime. <a href=\"/privacy.html\" style=\"color:inherit;text-decoration:underline\">Privacy Policy</a> · 🇱🇻 Built in Riga.",
       scroll_hint: 'Scroll to learn more',
       problem_label: 'The Problem',
       problem_stat_a: "of 116 recorded crashes with pedestrians wearing headphones involved a train",
@@ -2070,12 +2072,12 @@
       rm4_title: 'Beyond Riga',
       rm4_body: 'Tallinn, Vilnius, then all of Europe. Community-reported hazards. Apple Watch & Wear OS support. Gamification.',
       rm4_tag: '🌍 Future',
-      cta_label: 'Early Access',
-      cta_h2a: 'Be first to know',
-      cta_h2b: 'when we launch.',
-      cta_sub: 'Free for early users. Android first. Riga first.',
-      join_waitlist: 'Join Waitlist',
-      privacy_note: "DAGAR SIA will use your e-mail only to tell you when CrossAware launches. Collected via Formspree (USA). Unsubscribe anytime. <a href=\"/privacy.html\" style=\"color:inherit;text-decoration:underline\">Privacy Policy</a>",
+      cta_label: "Android beta",
+      cta_h2a: "Try it before",
+      cta_h2b: "everyone else.",
+      cta_sub: "Free during beta. Android now, iOS later. Riga first.",
+      join_waitlist: "Join the beta",
+      privacy_note: "Use the e-mail of your Google account. DAGAR SIA will use it only to invite you to the Android beta via Google Play (Google receives it for the tester list) or, for iOS, to e-mail you once at launch. Collected via Formspree (USA). Opt out anytime. <a href=\"/privacy.html\" style=\"color:inherit;text-decoration:underline\">Privacy Policy</a>",
       footer_copy: '© 2026 CrossAware. Made in Riga 🇱🇻',
       footer_privacy: 'Privacy',
       footer_contact: 'Contact',
@@ -2147,7 +2149,7 @@
       faq_a3: "GPS izsekotāji un atrašanās vietas lietotnes ir paredzētas, lai rādītu, kur atrodas bērns. CrossAware pievieno citu slāni: tas automātiski samazina mediju skaļumu un dod balss brīdinājumu pie bīstamajām vietām, lai bērns dzirdētu, kas tuvojas. Vecāki to var lietot kopā ar GPS izsekotāju.",
       faq_q4: 'Vai ir Findmykids (Pingo) alternatīva?',
       faq_a4: "Ja jau lieto Findmykids (Pingo), lai redzētu bērna atrašanās vietu, CrossAware nav aizvietotājs — tas ir cita veida rīks. Findmykids ir paredzēts, lai rādītu bērna atrašanās vietu kartē; CrossAware automātiski samazina mediju skaļumu un dod balss brīdinājumu, bērnam tuvojoties bīstamai vietai, lai viņš sadzirdētu vilcienu vai auto. Abas var lietot līdzās.",
-      nav_cta: 'Pievienoties gaidīšanas sarakstam',
+      nav_cta: "Pieteikties Android beta",
       hero_badge: "Android beta testēšanā · iOS plānots · Rīga, Latvija",
       hero_h1a: 'Staigā. Brauc.',
       hero_h1b: 'Klausies droši.',
@@ -2157,8 +2159,8 @@
       plat_android: '🤖 Android',
       plat_ios: '🍎 iOS',
       plat_both: 'Abi',
-      notify_me: 'Paziņot man',
-      waitlist_note: "DAGAR SIA izmantos tavu e-pastu tikai, lai paziņotu par CrossAware palaišanu. Pieteikumus apkopo Formspree (ASV). Atteikties vari jebkurā brīdī. <a href=\"/privacy.html\" style=\"color:inherit;text-decoration:underline\">Privātuma politika</a> · 🇱🇻 Veidots Rīgā.",
+      notify_me: "Pieteikties",
+      waitlist_note: "Norādi sava Google konta e-pastu. DAGAR SIA to izmantos tikai, lai uzaicinātu tevi Android beta testā caur Google Play (Google to saņem testētāju sarakstam) vai, ja izvēlies iOS, lai vienreiz paziņotu par palaišanu. Pieteikumus apkopo Formspree (ASV). Atteikties vari jebkurā brīdī. <a href=\"/privacy.html\" style=\"color:inherit;text-decoration:underline\">Privātuma politika</a> · 🇱🇻 Veidots Rīgā.",
       scroll_hint: 'Ritiniet, lai uzzinātu vairāk',
       problem_label: 'Problēma',
       problem_stat_a: "no 116 reģistrētiem negadījumiem ar gājējiem austiņās bija iesaistīts vilciens",
@@ -2243,12 +2245,12 @@
       rm4_title: 'Ārpus Rīgas',
       rm4_body: 'Tallina, Viļņa, tad visa Eiropa. Kopienas ziņotie apdraudējumi. Apple Watch un Wear OS atbalsts. Gamifikācija.',
       rm4_tag: '🌍 Nākotne',
-      cta_label: 'Agrīna piekļuve',
-      cta_h2a: 'Esiet pirmie,',
-      cta_h2b: 'kad mēs izlaižam.',
-      cta_sub: 'Bezmaksas agrīniem lietotājiem. Android pirmais. Rīga pirmā.',
-      join_waitlist: 'Pievienoties gaidīšanas sarakstam',
-      privacy_note: "DAGAR SIA izmantos tavu e-pastu tikai, lai paziņotu par CrossAware palaišanu. Pieteikumus apkopo Formspree (ASV). Atteikties vari jebkurā brīdī. <a href=\"/privacy.html\" style=\"color:inherit;text-decoration:underline\">Privātuma politika</a>",
+      cta_label: "Android beta",
+      cta_h2a: "Izmēģiniet",
+      cta_h2b: "pirms citiem.",
+      cta_sub: "Beta laikā bez maksas. Tagad Android, iOS vēlāk. Rīga pirmā.",
+      join_waitlist: "Pieteikties beta",
+      privacy_note: "Norādi sava Google konta e-pastu. DAGAR SIA to izmantos tikai, lai uzaicinātu tevi Android beta testā caur Google Play (Google to saņem testētāju sarakstam) vai, ja izvēlies iOS, lai vienreiz paziņotu par palaišanu. Pieteikumus apkopo Formspree (ASV). Atteikties vari jebkurā brīdī. <a href=\"/privacy.html\" style=\"color:inherit;text-decoration:underline\">Privātuma politika</a>",
       footer_copy: '© 2026 CrossAware. Veidots Rīgā 🇱🇻',
       footer_privacy: 'Privātums',
       footer_contact: 'Kontakti',
@@ -2354,7 +2356,7 @@
       form.style.display = 'none';
       document.querySelector('.platform-selector').style.display = 'none';
       const msg = document.getElementById('successMsg');
-      msg.textContent = `✅ You're on the ${platformLabel} waitlist! We'll be in touch.`;
+      msg.textContent = platformLabel === 'iOS' ? (currentLang === 'lv' ? '✅ Paldies! Paziņosim, kad iOS versija būs pieejama.' : "✅ Thanks! We'll e-mail you when the iOS app launches.") : (currentLang === 'lv' ? '✅ Paldies! Gaidi beta uzaicinājumu e-pastā.' : '✅ Thanks! Watch your inbox for an Android beta invite.');
       msg.style.display = 'block';
     }).catch(() => {
       alert(currentLang === 'lv' ? 'Neizdevās nosūtīt. Lūdzu, mēģini vēlreiz vai raksti uz hello@crossaware.com.' : 'Something went wrong. Please try again or email hello@crossaware.com.');
@@ -2378,7 +2380,7 @@
       form.style.display = 'none';
       const msg = document.getElementById('successMsg2');
       msg.style.display = 'block';
-      msg.textContent = "✅ You're on the list! We'll notify you at launch.";
+      msg.textContent = currentLang === 'lv' ? '✅ Paldies! Gaidi beta uzaicinājumu e-pastā.' : '✅ Thanks! Watch your inbox for an Android beta invite.';
     }).catch(() => {
       alert(currentLang === 'lv' ? 'Neizdevās nosūtīt. Lūdzu, mēģini vēlreiz vai raksti uz hello@crossaware.com.' : 'Something went wrong. Please try again or email hello@crossaware.com.');
     });
