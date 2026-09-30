@@ -976,50 +976,6 @@
     text-transform: uppercase;
   }
 
-  /* ── Social proof counter ── */
-  .counter-section {
-    text-align: center;
-    padding: 60px 24px;
-    border-top: 1px solid var(--border);
-    border-bottom: 1px solid var(--border);
-    background: var(--dark2);
-  }
-
-  .counter-num {
-    font-family: 'Syne', sans-serif;
-    font-size: clamp(48px, 8vw, 80px);
-    font-weight: 800;
-    background: linear-gradient(135deg, var(--blue-light), var(--green));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    letter-spacing: -2px;
-  }
-
-  .counter-label {
-    color: var(--muted);
-    font-size: 16px;
-    margin-top: 8px;
-  }
-
-  .counter-avatars {
-    display: flex;
-    justify-content: center;
-    margin-top: 24px;
-    gap: -8px;
-  }
-
-  .avatar {
-    width: 40px; height: 40px;
-    border-radius: 50%;
-    border: 2px solid var(--dark2);
-    background: linear-gradient(135deg, var(--blue), var(--green));
-    display: flex; align-items: center; justify-content: center;
-    font-size: 16px;
-    margin-left: -8px;
-  }
-  .avatar:first-child { margin-left: 0; }
-
   /* ── Final CTA ── */
   .final-cta {
     text-align: center;
@@ -1081,6 +1037,11 @@
   }
   .footer-links a:hover { color: #fff; }
 
+  .sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
+    .reveal { opacity: 1 !important; transform: none !important; }
+  }
   /* ── Animations ── */
   @keyframes fadeUp {
     from { opacity: 0; transform: translateY(24px); }
@@ -1132,6 +1093,7 @@
     <a href="#waitlist" class="nav-cta" data-i18n="nav_cta">Join Waitlist</a>
   </div>
 </nav>
+<main>
 
 <!-- Hero -->
 <section class="hero">
@@ -1168,7 +1130,7 @@
       <button class="plat-btn" id="platBoth" onclick="selectPlatform('both')" data-i18n="plat_both">Both</button>
     </div>
     <form action="https://formspree.io/f/xaqvbzpa" method="POST" class="waitlist-form" style="margin:8px 0 0;" onsubmit="handleSubmit1(event)">
-      <input class="waitlist-input" type="email" name="email" id="emailInput" placeholder="your@email.com" required/>
+      <label class="sr-only" for="emailInput">Email</label><input class="waitlist-input" type="email" name="email" id="emailInput" autocomplete="email" placeholder="your@email.com" required/>
       <input type="hidden" name="platform" id="platformInput" value="Android"/>
       <input type="hidden" name="_subject" value="CrossAware Waitlist — New Sign-up"/>
       <button type="submit" class="waitlist-btn" data-i18n="notify_me">Notify Me</button>
@@ -1394,9 +1356,6 @@
   </div>
 </section>
 
-<!-- Waitlist counter -->
-<div class="counter-section reveal">
-
 <!-- Sound control showcase -->
 <section class="section" style="padding-bottom:0">
   <div class="section-label reveal" style="text-align:center" data-i18n="sound_label">What Gets Controlled</div>
@@ -1497,18 +1456,6 @@
     </div>
   </div>
 </section>
-
-
-  <div class="counter-num" id="counter">0</div>
-  <div class="counter-label" data-i18n="counter_label">people already on the waitlist</div>
-  <div class="counter-avatars">
-    <div class="avatar">🧑</div>
-    <div class="avatar">👩</div>
-    <div class="avatar">🧔</div>
-    <div class="avatar">👱</div>
-    <div class="avatar">+</div>
-  </div>
-</div>
 
 <!-- Features -->
 <section class="section">
@@ -1779,7 +1726,7 @@
     <p class="reveal" data-i18n="cta_sub">Free for early users. Android first. Riga first.</p>
 
     <form action="https://formspree.io/f/xaqvbzpa" method="POST" class="waitlist-form reveal" style="margin:0 auto 20px" onsubmit="handleSubmit2(event)">
-      <input class="waitlist-input" type="email" name="email" id="emailInput2" placeholder="your@email.com" required/>
+      <label class="sr-only" for="emailInput2">Email</label><input class="waitlist-input" type="email" name="email" id="emailInput2" autocomplete="email" placeholder="your@email.com" required/>
       <input type="hidden" name="platform" value="General waitlist"/>
       <input type="hidden" name="_subject" value="CrossAware Waitlist — New Sign-up"/>
       <button type="submit" class="waitlist-btn" data-i18n="join_waitlist">Join Waitlist</button>
@@ -1790,57 +1737,7 @@
 </section>
 
 <!-- Privacy Policy Modal -->
-<div id="privacyModal" onclick="if(event.target===this)this.style.display='none'" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.7);z-index:9999;align-items:center;justify-content:center;backdrop-filter:blur(6px);padding:24px;">
-  <div style="background:#1a1a2e;border:1px solid rgba(255,255,255,0.1);border-radius:20px;padding:40px 48px;max-width:680px;width:100%;max-height:80vh;overflow-y:auto;position:relative;">
-    <button onclick="document.getElementById('privacyModal').style.display='none'" style="position:sticky;top:0;float:right;background:none;border:none;color:rgba(255,255,255,0.4);font-size:22px;cursor:pointer;">✕</button>
-  <div class="section-label">Legal</div>
-  <h2 style="margin-bottom:8px;">Privacy Policy</h2>
-  <p style="color:rgba(255,255,255,0.3);font-size:13px;margin-bottom:40px;">Last updated: June 30, 2026</p>
 
-  <p style="color:var(--muted);font-weight:300;margin-bottom:24px;">CrossAware ("we", "our", "the app") is a personal safety application that helps users — including children under parental supervision — stay aware of nearby hazards such as railway crossings and other danger zones. This Privacy Policy explains what information we collect, how we use it, and the choices you have.</p>
-
-  <h3 style="font-family:'Syne',sans-serif;font-size:18px;margin:32px 0 12px;border-bottom:1px solid var(--border);padding-bottom:8px;">Information We Collect</h3>
-  <ul style="color:var(--muted);font-weight:300;margin-left:22px;">
-    <li style="margin-bottom:8px;"><strong style="color:var(--text);">Location data:</strong> CrossAware uses your device's precise GPS location, including while the app is running in the background, to detect when you enter or leave a designated danger zone and to alert you. Location is processed locally on your device and may be stored in our backend (Supabase) to support zone tracking and activity history.</li>
-    <li style="margin-bottom:8px;"><strong style="color:var(--text);">Account information:</strong> If you create an account, we collect the email address and authentication data you provide.</li>
-    <li style="margin-bottom:8px;"><strong style="color:var(--text);">Activity logs:</strong> Records of danger zone entries/exits and hazard reports you submit, used to provide the activity log and statistics features.</li>
-    <li style="margin-bottom:8px;"><strong style="color:var(--text);">Device and notification tokens:</strong> Used to deliver push and local notifications (e.g. hazard alerts).</li>
-  </ul>
-
-  <h3 style="font-family:'Syne',sans-serif;font-size:18px;margin:32px 0 12px;border-bottom:1px solid var(--border);padding-bottom:8px;">How We Use Information</h3>
-  <ul style="color:var(--muted);font-weight:300;margin-left:22px;">
-    <li style="margin-bottom:8px;">To detect proximity to known hazards and send real-time safety alerts.</li>
-    <li style="margin-bottom:8px;">To maintain an offline-first, up-to-date map of danger zones (sourced in part from OpenStreetMap/Overpass data).</li>
-    <li style="margin-bottom:8px;">To support optional parental control features (PIN-protected safety mode), which are stored only on the device and not shared with us.</li>
-    <li style="margin-bottom:8px;">To improve app reliability and respond to support requests.</li>
-  </ul>
-
-  <h3 style="font-family:'Syne',sans-serif;font-size:18px;margin:32px 0 12px;border-bottom:1px solid var(--border);padding-bottom:8px;">Data Sharing</h3>
-  <p style="color:var(--muted);font-weight:300;">We do not sell your personal data. Location and account data are processed by our backend infrastructure provider (Supabase) solely to operate the app's core safety features. We do not share your data with advertisers or other third parties for marketing purposes.</p>
-
-  <h3 style="font-family:'Syne',sans-serif;font-size:18px;margin:32px 0 12px;border-bottom:1px solid var(--border);padding-bottom:8px;">Background Location</h3>
-  <p style="color:var(--muted);font-weight:300;">CrossAware requests background location access specifically to continue monitoring danger zones while the app is minimized, so that safety alerts are not missed. This tracking runs via a visible foreground notification while active and can be disabled at any time in the app's Settings, except where restricted by an active parental lock.</p>
-
-  <h3 style="font-family:'Syne',sans-serif;font-size:18px;margin:32px 0 12px;border-bottom:1px solid var(--border);padding-bottom:8px;">Children's Privacy / Parental Controls</h3>
-  <p style="color:var(--muted);font-weight:300;">CrossAware includes an optional parental PIN lock designed to prevent a child from disabling safety monitoring. This PIN is stored locally on the device only. CrossAware is intended to be set up and supervised by a parent or guardian on behalf of a minor; we do not knowingly collect more personal information from children than is necessary to provide the safety features described above.</p>
-
-  <h3 style="font-family:'Syne',sans-serif;font-size:18px;margin:32px 0 12px;border-bottom:1px solid var(--border);padding-bottom:8px;">Data Retention</h3>
-  <p style="color:var(--muted);font-weight:300;">Account and activity data are retained for as long as your account is active. You may request deletion of your account and associated data at any time by contacting us at the email below.</p>
-
-  <h3 style="font-family:'Syne',sans-serif;font-size:18px;margin:32px 0 12px;border-bottom:1px solid var(--border);padding-bottom:8px;">Your Choices</h3>
-  <ul style="color:var(--muted);font-weight:300;margin-left:22px;">
-    <li style="margin-bottom:8px;">You can disable location permissions at any time via your device settings, which will stop danger zone monitoring.</li>
-    <li style="margin-bottom:8px;">You can disable push notifications via your device settings.</li>
-    <li style="margin-bottom:8px;">You can request access to, correction of, or deletion of your personal data by contacting us.</li>
-  </ul>
-
-  <h3 style="font-family:'Syne',sans-serif;font-size:18px;margin:32px 0 12px;border-bottom:1px solid var(--border);padding-bottom:8px;">Changes to This Policy</h3>
-  <p style="color:var(--muted);font-weight:300;">We may update this Privacy Policy from time to time. Material changes will be reflected by updating the "Last updated" date above.</p>
-
-  <h3 style="font-family:'Syne',sans-serif;font-size:18px;margin:32px 0 12px;border-bottom:1px solid var(--border);padding-bottom:8px;">Contact Us</h3>
-  <p style="color:var(--muted);font-weight:300;">If you have questions about this Privacy Policy or your data, contact us at: <a href="mailto:hello@crossaware.com" style="color:var(--green);">hello@crossaware.com</a></p>
-  </div>
-</div>
 
 <!-- Footer -->
 
@@ -1922,13 +1819,8 @@
   "@type": "SoftwareApplication",
   "name": "CrossAware",
   "applicationCategory": "SafetyApplication",
-  "operatingSystem": "Android, iOS",
-  "description": "CrossAware is a personal safety app that automatically pauses music and lowers call volume when you approach danger zones such as railway crossings and dangerous intersections. It complements family-safety apps like Life360, Findmykids (Pingo), Qustodio, and Google Family Link by adding automatic, on-device audio protection.",
-  "offers": [
-    {"@type": "Offer", "name": "Early Bird", "price": "2.99", "priceCurrency": "EUR"},
-    {"@type": "Offer", "name": "Standard", "price": "3.99", "priceCurrency": "EUR"},
-    {"@type": "Offer", "name": "Family", "price": "5.99", "priceCurrency": "EUR"}
-  ]
+  "operatingSystem": "Android",
+  "description": "CrossAware is a personal safety app that automatically pauses music and lowers call volume when you approach danger zones such as railway crossings and dangerous intersections. It complements family-safety apps like Life360, Findmykids (Pingo), Qustodio, and Google Family Link by adding automatic, on-device audio protection."
 }
 </script>
 <script type="application/ld+json">
@@ -2019,6 +1911,7 @@
 </style>
 <!-- (Supported-by section moved directly below the hero) -->
 
+</main>
 <footer>
   <div class="logo" style="font-size:16px">
     <div class="logo-dot"></div>
@@ -2029,17 +1922,17 @@
   <div class="footer-links">
     <a href="/privacy.html" data-i18n="footer_privacy">Privacy</a>
     <a href="/terms.html" data-i18n="footer_terms">Terms</a>
-    <a href="#" onclick="document.getElementById('contactModal').style.display='flex';return false;" data-i18n="footer_contact">Contact</a>
+    <a href="#" onclick="openContact();return false;" data-i18n="footer_contact">Contact</a>
     <a href="#" data-i18n="footer_press">Press</a>
   </div>
 </footer>
 
 <!-- Contact Modal -->
-<div id="contactModal" onclick="if(event.target===this)this.style.display='none'" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.7);z-index:9999;align-items:center;justify-content:center;backdrop-filter:blur(6px);">
+<div id="contactModal" role="dialog" aria-modal="true" aria-labelledby="contactTitle" onclick="if(event.target===this)closeContact()" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.7);z-index:9999;align-items:center;justify-content:center;backdrop-filter:blur(6px);">
   <div style="background:#1a1a2e;border:1px solid rgba(255,255,255,0.1);border-radius:20px;padding:40px 48px;max-width:420px;width:90%;text-align:center;position:relative;">
-    <button onclick="document.getElementById('contactModal').style.display='none'" style="position:absolute;top:16px;right:20px;background:none;border:none;color:rgba(255,255,255,0.4);font-size:22px;cursor:pointer;">✕</button>
+    <button id="contactClose" aria-label="Close" onclick="closeContact()" style="position:absolute;top:16px;right:20px;background:none;border:none;color:rgba(255,255,255,0.4);font-size:22px;cursor:pointer;">✕</button>
     <div style="font-size:36px;margin-bottom:16px;">👋</div>
-    <h3 style="color:#fff;font-size:22px;font-weight:700;margin-bottom:8px;letter-spacing:-0.5px;" data-i18n="contact_title">Get in touch</h3>
+    <h3 id="contactTitle" style="color:#fff;font-size:22px;font-weight:700;margin-bottom:8px;letter-spacing:-0.5px;" data-i18n="contact_title">Get in touch</h3>
     <p style="color:rgba(255,255,255,0.45);font-size:14px;margin-bottom:28px;line-height:1.6;" data-i18n="contact_sub">We're happy to answer any questions about CrossAware.</p>
     <a href="mailto:hello@crossaware.com" style="display:flex;align-items:center;gap:14px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:12px;padding:16px 20px;text-decoration:none;margin-bottom:12px;transition:background 0.2s;" onmouseover="this.style.background='rgba(255,255,255,0.1)'" onmouseout="this.style.background='rgba(255,255,255,0.06)'">
       <span style="font-size:22px;">✉️</span>
@@ -2143,7 +2036,6 @@
       ba_before_body: 'Walking through Maskavas iela railway crossing at full volume on a Zoom call',
       ba_after_label: '✅ With CrossAware',
       ba_after_body: 'Mic auto-mutes, volume drops, you hear the train warning — meeting resumes 20m later',
-      counter_label: 'people already on the waitlist',
       feat_label: 'Features',
       feat_h2a: 'Built for how',
       feat_h2b: 'you actually move.',
@@ -2312,7 +2204,6 @@
       ba_before_body: 'Šķērsojat Maskavas ielas dzelzceļa pāreju pilnā skaļumā Zoom zvana laikā',
       ba_after_label: '✅ Ar CrossAware',
       ba_after_body: 'Mikrofons automātiski izslēdzas, skaļums samazinās, dzirdat vilciena brīdinājumu — sapulce atsākas 20m tālāk',
-      counter_label: 'cilvēki jau gaidīšanas sarakstā',
       feat_label: 'Funkcijas',
       feat_h2a: 'Veidots tam,',
       feat_h2b: 'kā jūs pārvietojaties.',
@@ -2444,22 +2335,6 @@
   }
 
 
-  let count = 47;
-
-  function animateCounter(target) {
-    const el = document.getElementById('counter');
-    const duration = 1800;
-    const start = performance.now();
-    function tick(now) {
-      const p = Math.min((now - start) / duration, 1);
-      const ease = 1 - Math.pow(1 - p, 3);
-      el.textContent = Math.floor(ease * target);
-      if (p < 1) requestAnimationFrame(tick);
-      else el.textContent = target;
-    }
-    requestAnimationFrame(tick);
-  }
-
   function handleSubmit1(e) {
     e.preventDefault();
     const form = e.target;
@@ -2480,8 +2355,6 @@
       const msg = document.getElementById('successMsg');
       msg.textContent = `✅ You're on the ${platformLabel} waitlist! We'll be in touch.`;
       msg.style.display = 'block';
-      count++;
-      document.getElementById('counter').textContent = count;
     });
   }
 
@@ -2502,8 +2375,6 @@
       const msg = document.getElementById('successMsg2');
       msg.style.display = 'block';
       msg.textContent = "✅ You're on the list! We'll notify you at launch.";
-      count++;
-      document.getElementById('counter').textContent = count;
     });
   }
 
@@ -2534,22 +2405,11 @@
     entries.forEach(e => {
       if (e.isIntersecting) {
         e.target.classList.add('visible');
-        // Animate counter when it enters view
-        if (e.target.classList.contains('counter-section') || e.target.closest('.counter-section')) {
-          animateCounter(count);
-        }
       }
     });
   }, { threshold: 0.15 });
 
   document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-
-  // Trigger counter when counter section enters
-  const counterSection = document.querySelector('.counter-section');
-  const counterObserver = new IntersectionObserver((entries) => {
-    if (entries[0].isIntersecting) { animateCounter(count); counterObserver.disconnect(); }
-  }, { threshold: 0.5 });
-  if (counterSection) counterObserver.observe(counterSection);
 
   // ── Parent dashboard child status animation ────────────────────────────────
   const childStates = [
@@ -2606,10 +2466,25 @@
   runBannerCycle();
   setInterval(runBannerCycle, 6000);
 
-  // Auto-open Privacy Policy modal when linked via #privacy (e.g. from Play Store)
+  // ── Contact dialog ──
+  let contactOpener = null;
+  function openContact() {
+    contactOpener = document.activeElement;
+    document.getElementById('contactModal').style.display = 'flex';
+    document.getElementById('contactClose').focus();
+  }
+  function closeContact() {
+    document.getElementById('contactModal').style.display = 'none';
+    if (contactOpener) contactOpener.focus();
+  }
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && document.getElementById('contactModal').style.display === 'flex') closeContact();
+  });
+
+  // Old #privacy links (e.g. from Play Store) go to the standalone policy
   function checkPrivacyHash() {
     if (window.location.hash === '#privacy') {
-      document.getElementById('privacyModal').style.display = 'flex';
+      window.location.replace('/privacy.html');
     }
   }
   checkPrivacyHash();
