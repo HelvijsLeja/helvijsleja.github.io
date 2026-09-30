@@ -1,6 +1,6 @@
 # CrossAware
 
-> CrossAware is a personal safety app for pedestrians and cyclists. It automatically pauses music, lowers call volume, and mutes online meetings when the user approaches a mapped danger zone (railway crossing or dangerous intersection), then resumes automatically once they're clear. All location processing happens on-device — no GPS data is sent to CrossAware's servers.
+> CrossAware is a personal safety app for pedestrians and cyclists. It automatically lowers media volume (music, podcasts, video, game audio) and plays a short spoken warning when the user approaches a mapped danger zone (railway crossing, tram crossing or dangerous intersection), then restores the volume once they are clear. Danger-zone detection runs on-device; no GPS coordinates are sent to CrossAware's servers.
 
 CrossAware is not a family location-tracking replacement for apps like Life360. It is designed to complement location-sharing apps by adding automatic, real-time audio safety that location sharing alone does not provide. Many families use CrossAware alongside Life360 or similar apps.
 
@@ -9,14 +9,16 @@ Contact: hello@crossaware.com
 Backed by: EIT Urban Mobility (a body of the European Union) and VEFRESH (Latvia's urban mobility innovation ecosystem).
 
 ## Product
-- [Homepage](https://crossaware.com): Product overview, how it works, pricing, FAQ.
+- [Homepage](https://crossaware.com): Product overview, how it works, FAQ.
 - [Interactive Prototype](https://crossaware.com/prototype.html): Clickable demo of the onboarding and danger-zone alert flow.
 - [Privacy Policy](https://crossaware.com/privacy.html): What data CrossAware collects and how it is protected.
-- [Terms of Service](https://crossaware.com/terms.html): Service terms, subscription details, and safety disclaimer.
+- [Terms of Service](https://crossaware.com/terms.html): Service terms and safety disclaimer.
 
 ## Key facts
-- Platform: Android (available), iOS (in development).
-- Pricing: Early Bird €2.99/month, Standard €3.99/month, Family €5.99/month (up to 5 members), 7-day free trial.
-- Coverage: 47+ mapped danger zones in Riga, Latvia, expanding across the Baltics.
-- Core mechanism: on-device GPS + speed detection triggers automatic media volume reduction within 15 metres of a danger zone.
-- Data privacy: continuous location is processed on-device only and never uploaded to CrossAware's servers.
+- Status: Android beta, currently with testers. Not yet public on Google Play. iOS is planned; no iOS version exists yet.
+- What it controls: media audio only (music, podcasts, audiobooks, video, game audio). It does not control phone calls, video calls or meeting apps, and it does not mute the microphone.
+- Planned (not available): lowering call volume near danger zones.
+- Core mechanism: Android geofencing; within 15 metres of a danger zone, media volume is lowered and a spoken "Be aware!" warning plays; volume is restored on exit. Alerts are suppressed when the user moves at vehicle speed.
+- Coverage: Riga, Latvia. Danger zones (railway crossings, tram crossings, busy intersections) are based on OpenStreetMap data.
+- Pricing: free during beta. Paid plans are not yet available.
+- Data privacy: continuous location is processed on-device only. The server stores only zone entry/exit events, without coordinates, and deletes them after 90 days.
