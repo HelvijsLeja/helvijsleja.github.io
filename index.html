@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <meta name="google-site-verification" content="jQX9LMPp3nP7lT3XHxxzQgkQvDvdnK7w-xZzLRke5qQ"/>
 <title>CrossAware — Safety App for Pedestrians &amp; Cyclists</title>
-<meta name="description" content="CrossAware turns your music down near railway crossings and dangerous intersections so you hear traffic in time. Android beta now. A complement to family-locator apps like Life360.">
+<meta name="description" content="CrossAware turns your music down near railway crossings and dangerous intersections in Riga, so you hear the train in time. Android beta. Not a Life360 replacement.">
 <link rel="canonical" href="https://crossaware.com/"/>
 <!-- Open Graph / social sharing -->
 <meta property="og:type" content="website"/>
@@ -1104,9 +1104,9 @@
     <span data-i18n="hero_badge">Android beta testing now · iOS planned · Riga, Latvia</span>
   </div>
 
-  <h1><span data-i18n="hero_h1a">Walk. Ride.</span><br/><em data-i18n="hero_h1b">Listen Safely.</em></h1>
+  <h1><span data-i18n="hero_h1a">Hear. Cross.</span><br/><em data-i18n="hero_h1b">Carry on.</em><span data-i18n="hero_h1c" style="display:block;font-size:0.3em;font-weight:500;font-style:normal;letter-spacing:0;line-height:1.4;color:#9CA3AF;margin-top:16px">The safety app for pedestrians and cyclists who wear headphones</span></h1>
 
-  <p class="hero-sub" data-i18n="hero_sub">CrossAware turns your music, podcasts and videos down as you approach a railway crossing or dangerous intersection, so you hear the train or car in time. Volume comes back when you are clear.<br><span style="font-size:0.7em;color:#9CA3AF;font-weight:400">A personal safety app for pedestrians and cyclists. Designed to complement family-safety apps such as Life360, Findmykids (Pingo), Qustodio or Google Family Link.</span></p>
+  <p class="hero-sub" data-i18n="hero_sub">CrossAware turns your music, podcasts and videos down as you approach a railway crossing or dangerous intersection in Riga, so you hear the train or car in time. Volume comes back when you are clear.</p>
 
   <!-- Platform badges -->
   <div class="platform-badges" style="display:flex;gap:10px;justify-content:center;margin-bottom:28px;animation:fadeUp 0.6s 0.25s ease both;">
@@ -1236,15 +1236,15 @@
           <div class="phone-stats">
             <div class="phone-stat">
               <div class="val" id="pauseCount">3</div>
-              <div class="lbl">Alerts today</div>
+              <div class="lbl" data-i18n="mock_alerts">Alerts today</div>
             </div>
             <div class="phone-stat">
-              <div class="val">2.4km</div>
-              <div class="lbl">Protected</div>
+              <div class="val">12</div>
+              <div class="lbl" data-i18n="mock_zones">Zones nearby</div>
             </div>
             <div class="phone-stat">
-              <div class="val">18m</div>
-              <div class="lbl">Active</div>
+              <div class="val" data-i18n="mock_on">On</div>
+              <div class="lbl" data-i18n="mock_bg">Background</div>
             </div>
           </div>
         </div>
@@ -1260,9 +1260,9 @@
   </div>
 </section>
 
-<!-- ── Supported by (EIT Urban Mobility incubator) ── -->
+<!-- ── Urban Mobility Incubator 2026 (supported by EIT Urban Mobility) ── -->
 <section class="supported-by">
-  <p class="supported-label" data-i18n="supported_by">Supported by</p>
+  <p class="supported-label" data-i18n="supported_by">Participant · <a href="https://www.urbanmobility.io" target="_blank" rel="noopener" style="color:inherit">Urban Mobility Incubator 2026</a>, supported by EIT Urban Mobility</p>
   <div class="supported-logos">
     <a href="https://www.eiturbanmobility.eu" target="_blank" rel="noopener"
        class="supporter" aria-label="EIT Urban Mobility">
@@ -1288,29 +1288,15 @@
         <div class="problem-point">
           <div class="problem-point-icon">🎧</div>
           <div>
-            <h4 data-i18n="prob1_title">Headphones block critical audio cues</h4>
-            <p data-i18n="prob1_body">You can't hear oncoming trains, car horns, or warning signals when music is playing at full volume.</p>
-          </div>
-        </div>
-        <div class="problem-point">
-          <div class="problem-point-icon">📞</div>
-          <div>
-            <h4 data-i18n="prob2_title">Podcasts and videos pull you in too</h4>
-            <p data-i18n="prob2_body">A gripping podcast or a video on the move splits your attention just like loud music, and the sound still masks an approaching train.</p>
+            <h4 data-i18n="prob1_title">Headphones mask the train</h4>
+            <p data-i18n="prob1_body">Music, a podcast or a video at full volume covers the train horn, the tram bell and the car you did not see.</p>
           </div>
         </div>
         <div class="problem-point">
           <div class="problem-point-icon">📱</div>
           <div>
-            <h4 data-i18n="prob3_title">Manual pausing is unreliable</h4>
-            <p data-i18n="prob3_body">Reaching for your phone at a crossing takes attention away from the road at the worst possible moment.</p>
-          </div>
-        </div>
-        <div class="problem-point">
-          <div class="problem-point-icon">🗺️</div>
-          <div>
-            <h4 data-i18n="prob4_title">Danger zones are on every route</h4>
-            <p data-i18n="prob4_body">Railway crossings, tram tracks and busy intersections across the city. Most pedestrians and cyclists don't know them all, and safety shouldn't depend on memorising a map.</p>
+            <h4 data-i18n="prob3_title">You can't remember every crossing</h4>
+            <p data-i18n="prob3_body">Railway crossings, tram tracks and busy junctions are on every route. Reaching for your phone at the crossing is the worst moment to look away.</p>
           </div>
         </div>
       </div>
@@ -1321,26 +1307,26 @@
 <!-- How it works -->
 <section class="section">
   <div class="section-label reveal" data-i18n="how_label">How It Works</div>
-  <h2 class="reveal"><span data-i18n="how_h2a">Three steps.</span><br/><span data-i18n="how_h2b" style="color:var(--muted)">Zero effort.</span></h2>
+  <h2 class="reveal"><span data-i18n="how_h2a">How CrossAware works</span><br/><span data-i18n="how_h2b" style="color:var(--muted)">in three steps</span></h2>
 
   <div class="steps reveal">
     <div class="step">
       <div class="step-num">01</div>
       <span class="step-icon">📍</span>
-      <h3 data-i18n="step1_title">We track your location</h3>
-      <p data-i18n="step1_body">CrossAware uses GPS to know exactly where you are. Danger zone detection happens right on your device — if you create an account, your activity history is securely stored to power your safety stats.</p>
+      <h3 data-i18n="step1_title">Your phone knows the danger zones</h3>
+      <p data-i18n="step1_body">Riga's railway crossings, tram crossings and busy junctions are loaded on your phone. Your location is checked against them on the device; it is not sent to our servers.</p>
     </div>
     <div class="step">
       <div class="step-num">02</div>
       <span class="step-icon">🏃</span>
-      <h3 data-i18n="step2_title">We detect your speed</h3>
-      <p data-i18n="step2_body">Walking or cycling? CrossAware is on. Moving at car speed? Alerts stay off.</p>
+      <h3 data-i18n="step2_title">On foot or by bike only</h3>
+      <p data-i18n="step2_body">Walking or cycling, CrossAware is on. At car speed, alerts stay off.</p>
     </div>
     <div class="step">
       <div class="step-num">03</div>
-      <span class="step-icon">⏸️</span>
-      <h3 data-i18n="step3_title">Your music turns down automatically</h3>
-      <p data-i18n="step3_body">Within 15 metres of a danger zone, media volume drops automatically. Once you are clear, it goes back to where it was.</p>
+      <span class="step-icon">🔉</span>
+      <h3 data-i18n="step3_title">Volume drops, you hear a warning</h3>
+      <p data-i18n="step3_body">About 15 metres before a danger zone, media volume drops and a short voice says "Be aware!". Once you are clear, volume goes back to where it was.</p>
     </div>
   </div>
 </section>
@@ -1349,17 +1335,16 @@
 <section class="section" style="padding-top:60px;padding-bottom:60px">
   <div style="max-width:760px;margin:0 auto;text-align:center;background:linear-gradient(160deg, rgba(37,99,235,0.1), rgba(0,201,167,0.07));border:1px solid rgba(0,201,167,0.25);border-radius:24px;padding:48px 28px;" class="reveal">
     <div class="section-label" style="text-align:center" data-i18n="demo_label">Try It Yourself</div>
-    <h2 style="margin-bottom:14px"><span data-i18n="demo_h2a">See the app in action</span><br/><span data-i18n="demo_h2b" style="color:var(--muted)">before you install it.</span></h2>
-    <p style="color:#9CA3AF;font-size:15.5px;line-height:1.7;max-width:520px;margin:0 auto 28px" data-i18n="demo_body">Tap through the full CrossAware experience — onboarding, permissions, and the moment your music turns down at a railway crossing. Works right in your browser, no download needed.</p>
+    <h2 style="margin-bottom:14px"><span data-i18n="demo_h2a">Try the app</span><br/><span data-i18n="demo_h2b" style="color:var(--muted)">in your browser</span></h2>
+    <p style="color:#9CA3AF;font-size:15.5px;line-height:1.7;max-width:520px;margin:0 auto 28px" data-i18n="demo_body">A 2-minute clickable prototype: set-up, permissions and the moment your music turns down at a railway crossing.</p>
     <a href="prototype.html" style="display:inline-flex;align-items:center;gap:10px;background:var(--blue);color:#fff;text-decoration:none;font-weight:600;font-size:16px;padding:16px 34px;border-radius:100px;box-shadow:0 8px 28px rgba(37,99,235,0.4);transition:transform 0.15s, box-shadow 0.2s" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='none'" data-i18n="demo_cta">▶ Launch interactive demo</a>
-    <p style="color:#4B5563;font-size:12.5px;margin-top:16px" data-i18n="demo_note">2-minute clickable prototype of the Android app</p>
   </div>
 </section>
 
 <!-- Sound control showcase -->
 <section class="section" style="padding-bottom:0">
   <div class="section-label reveal" style="text-align:center" data-i18n="sound_label">What Gets Controlled</div>
-  <h2 class="reveal" style="text-align:center"><span data-i18n="sound_h2a">Not just music.</span><br/><span data-i18n="sound_h2b" style="color:var(--muted)">All media audio.</span></h2>
+  <h2 class="reveal" style="text-align:center"><span data-i18n="sound_h2a">What CrossAware turns down:</span><br/><span data-i18n="sound_h2b" style="color:var(--muted)">all media audio</span></h2>
 
   <div class="sound-grid reveal">
 
@@ -1393,8 +1378,8 @@
         </div>
       </div>
       <div class="sound-card-body">
-        <h3 data-i18n="sound2_title">Phone calls</h3>
-        <p data-i18n="sound2_body">Lowering call volume near danger zones is planned. It is not in the current version.</p>
+        <h3 data-i18n="sound2_title">Calls: not yet</h3>
+        <p data-i18n="sound2_body">Phone and video calls are not controlled. Lowering call volume is planned.</p>
         <div class="action-tag lower-tag" data-i18n="sound2_tag">🕓 Phase 2 · planned</div>
       </div>
     </div>
@@ -1430,14 +1415,8 @@
       </div>
       <div class="sound-card-body">
         <h3 data-i18n="sound4_title">Mobile Games</h3>
-        <p data-i18n="sound4_body">In-game sound and background music, lowered near danger zones so you stay aware of your surroundings.</p>
+        <p data-i18n="sound4_body">In-game sound and music.</p>
         <div class="action-tag" style="background:rgba(16,185,129,0.12);color:var(--green);border:1px solid rgba(16,185,129,0.25)" data-i18n="sound4_tag">🔉 Audio lowered</div>
-        <div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:10px;">
-          <span style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);color:#d1d5db;font-size:11px;padding:3px 9px;border-radius:6px;">PUBG Mobile</span>
-          <span style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);color:#d1d5db;font-size:11px;padding:3px 9px;border-radius:6px;">Fortnite</span>
-          <span style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);color:#d1d5db;font-size:11px;padding:3px 9px;border-radius:6px;">Clash of Clans</span>
-          <span style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);color:#d1d5db;font-size:11px;padding:3px 9px;border-radius:6px;">+ more</span>
-        </div>
       </div>
     </div>
 
@@ -1460,7 +1439,7 @@
 <!-- Features -->
 <section class="section">
   <div class="section-label reveal" data-i18n="feat_label">Features</div>
-  <h2 class="reveal"><span data-i18n="feat_h2a">Built for how</span><br/><span data-i18n="feat_h2b" style="color:var(--muted)">you actually move.</span></h2>
+  <h2 class="reveal"><span data-i18n="feat_h2a">Features</span><br/><span data-i18n="feat_h2b" style="color:var(--muted)">for walking and cycling in Riga</span></h2>
 
   <div class="features-grid reveal">
     <div class="feature-card">
@@ -1478,33 +1457,11 @@
       <h3 data-i18n="feat3_title">Works in the Background</h3>
       <p data-i18n="feat3_body">Zone monitoring uses Android's built-in geofencing. It keeps working with the app closed and after a phone restart.</p>
     </div>
-    <div class="feature-card">
-      <div class="feature-icon" style="background:rgba(245,158,11,0.12)">📊</div>
-      <h3 data-i18n="feat4_title">Activity Insights</h3>
-      <p data-i18n="feat4_body">See how many times CrossAware stepped in and which danger zones you pass most often.</p>
-    </div>
-    <div class="feature-card" style="border-color:rgba(37,99,235,0.2);background:linear-gradient(135deg,#0D1424,#0F1F3D);">
-      <div class="feature-icon" style="background:rgba(37,99,235,0.15)">🎵</div>
-      <h3 data-i18n="feat5_title">Volume Drops Automatically</h3>
-      <p data-i18n="feat5_body">Spotify, YouTube Music, podcasts, audiobooks: whatever is playing turns down as you enter a danger zone and comes back when you are clear.</p>
-    </div>
-    <div class="feature-card" style="border-color:rgba(239,68,68,0.2);background:linear-gradient(135deg,#0D1424,#1F0D0D);">
-      <div class="feature-icon" style="background:rgba(239,68,68,0.12)">📞</div>
-      <h3 data-i18n="feat6_title">Call volume (planned)</h3>
-      <p data-i18n="feat6_body">Lowering call volume near danger zones is on the roadmap. Today CrossAware controls media audio only: music, podcasts, video and games.</p>
-      <span class="coming-soon" data-i18n="phase2">Phase 2</span>
-    </div>
     <div class="feature-card" style="border-color:rgba(139,92,246,0.2);background:linear-gradient(135deg,#0D1424,#150D1F);">
       <div class="feature-icon" style="background:rgba(139,92,246,0.12)">🔊</div>
       <h3 data-i18n="feat7_title">Spoken warning</h3>
-      <p data-i18n="feat7_body">As you enter a danger zone you hear a short "Be aware!" over your media and get a notification. No need to look at the screen.</p>
+      <p data-i18n="feat7_body">A short spoken "Be aware!" (English) and a notification. No need to look at the screen.</p>
       
-    </div>
-    <div class="feature-card">
-      <div class="feature-icon" style="background:rgba(16,185,129,0.12)">🏙️</div>
-      <h3 data-i18n="feat8_title">More Cities Coming</h3>
-      <p data-i18n="feat8_body">Starting with Riga, then expanding across Latvia and the Baltics.</p>
-      <span class="coming-soon" data-i18n="phase2">Phase 2</span>
     </div>
   </div>
 </section>
@@ -1512,28 +1469,16 @@
 <!-- Roadmap -->
 <section class="section">
   <div class="section-label reveal" style="text-align:center" data-i18n="roadmap_label">Roadmap</div>
-  <h2 class="reveal" style="text-align:center"><span data-i18n="roadmap_h2a">How we're</span><br/><span data-i18n="roadmap_h2b" style="color:var(--muted)">getting there.</span></h2>
+  <h2 class="reveal" style="text-align:center"><span data-i18n="roadmap_h2a">Roadmap:</span><br/><span data-i18n="roadmap_h2b" style="color:var(--muted)">Android now, iOS next</span></h2>
 
   <div class="timeline reveal">
-    <div class="timeline-item">
-      <div class="timeline-left">
-        <div class="timeline-circle" style="background:rgba(52,199,89,0.12);border-color:rgba(52,199,89,0.4);color:#34C759">✓</div>
-        <div class="timeline-line"></div>
-      </div>
-      <div class="timeline-content">
-        <div class="timeline-phase" style="color:#34C759" data-i18n="rm1_phase">Now — Done</div>
-        <h3 data-i18n="rm1_title">Concept & Prototype</h3>
-        <p data-i18n="rm1_body">App design complete. All screens, logic, and danger zone data for Riga mapped out and ready for development.</p>
-        <span class="timeline-tag" style="background:rgba(52,199,89,0.1);color:#34C759" data-i18n="rm1_tag">✅ Complete</span>
-      </div>
-    </div>
     <div class="timeline-item">
       <div class="timeline-left">
         <div class="timeline-circle" style="background:rgba(37,99,235,0.12);border-color:rgba(37,99,235,0.4);color:var(--blue-light)">🔨</div>
         <div class="timeline-line"></div>
       </div>
       <div class="timeline-content">
-        <div class="timeline-phase" style="color:var(--blue-light)" data-i18n="rm2_phase">Phase 1 — Beta testing</div>
+        <div class="timeline-phase" style="color:var(--blue-light)" data-i18n="rm2_phase">Now — Android beta</div>
         <h3 data-i18n="rm2_title">Android MVP</h3>
         <p data-i18n="rm2_body">Native Android app: on-device danger-zone detection, automatic media volume drop and a spoken warning, Riga danger zones pre-loaded. The Android beta is running with testers.</p>
         <span class="timeline-tag" style="background:rgba(37,99,235,0.1);color:var(--blue-light)" data-i18n="rm2_tag">🤖 Android beta</span>
@@ -1557,155 +1502,12 @@
       </div>
       <div class="timeline-content">
         <div class="timeline-phase" style="color:#A78BFA" data-i18n="rm4_phase">Phase 3 — Growth</div>
-        <h3 data-i18n="rm4_title">Beyond Riga</h3>
-        <p data-i18n="rm4_body">Tallinn, Vilnius, then all of Europe. Community-reported hazards. Apple Watch &amp; Wear OS support. Gamification.</p>
+        <h3 data-i18n="rm4_title">Later: more cities and parent features</h3>
+        <p data-i18n="rm4_body">Planned, no dates yet: other Latvian and Baltic cities, reporting hazards from the app and features for parents.</p>
         <span class="timeline-tag" style="background:rgba(139,92,246,0.1);color:#A78BFA" data-i18n="rm4_tag">🌍 Future</span>
       </div>
     </div>
   </div>
-</section>
-
-<!-- Parents & Children Section -->
-<section class="section parents-section">
-  <div class="parents-header reveal">
-    <div class="section-label" data-i18n="parents_label">For Parents</div>
-    <span class="coming-soon" data-i18n="phase2">Phase 2</span>
-    <h2><span data-i18n="parents_h2a">Keep your kids safe</span><br/><em data-i18n="parents_h2b" style="color:var(--green)">on every walk to school.</em></h2>
-    <p class="parents-intro" data-i18n="parents_intro">Children are the most vulnerable pedestrians. CrossAware's Parent Dashboard gives you full visibility and control over how your child uses the app — so you can let them walk independently without losing peace of mind.</p>
-  </div>
-
-  <!-- Parent dashboard mockup + feature list -->
-  <div class="parents-grid reveal">
-
-    <!-- Left: dashboard card -->
-    <div class="parent-dashboard-card">
-      <div class="pdc-header">
-        <div class="pdc-title">
-          <span style="font-size:18px">👨‍👩‍👧</span>
-          <div>
-            <div style="font-weight:700;font-size:14px" data-i18n="pdc_title">Parent Dashboard</div>
-            <div style="font-size:11px;color:#6B7280" data-i18n="pdc_sub">2 children monitored</div>
-          </div>
-        </div>
-        <div class="pdc-preview-badge">
-          <span data-i18n="pdc_live">CONCEPT PREVIEW</span>
-        </div>
-      </div>
-
-      <!-- Child 1 -->
-      <div class="child-row" id="child1row">
-        <div class="child-avatar" style="background:linear-gradient(135deg,#2563EB,#10B981)">M</div>
-        <div class="child-info">
-          <div style="font-weight:600;font-size:13px" data-i18n="child1_name">Marta, 11</div>
-          <div style="font-size:11px;color:#6B7280" data-i18n="child1_status">Walking to school · 0.8km away</div>
-        </div>
-        <div class="child-status safe" id="child1status">
-          <span id="child1icon">✅</span>
-          <span id="child1label" data-i18n="status_safe">Safe</span>
-        </div>
-      </div>
-
-      <!-- Child 2 -->
-      <div class="child-row">
-        <div class="child-avatar" style="background:linear-gradient(135deg,#F59E0B,#EF4444)">T</div>
-        <div class="child-info">
-          <div style="font-weight:600;font-size:13px" data-i18n="child2_name">Toms, 14</div>
-          <div style="font-size:11px;color:#6B7280" data-i18n="child2_status">Cycling home · 1.2km away</div>
-        </div>
-        <div class="child-status safe">
-          <span>✅</span>
-          <span data-i18n="status_safe">Safe</span>
-        </div>
-      </div>
-
-      <!-- Alert log -->
-      <div class="pdc-log">
-        <div class="pdc-log-title" data-i18n="pdc_log_title">Today's alerts</div>
-        <div class="pdc-log-item">
-          <span class="log-dot" style="background:#10B981"></span>
-          <span class="log-time">08:14</span>
-          <span class="log-text" data-i18n="log1">Marta passed Maskavas iela crossing safely</span>
-        </div>
-        <div class="pdc-log-item">
-          <span class="log-dot" style="background:#F59E0B"></span>
-          <span class="log-time">08:31</span>
-          <span class="log-text" data-i18n="log2">Volume lowered: Toms near Brīvības crossing</span>
-        </div>
-        <div class="pdc-log-item">
-          <span class="log-dot" style="background:#10B981"></span>
-          <span class="log-time">08:33</span>
-          <span class="log-text" data-i18n="log3">Toms cleared the danger zone. Volume restored.</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- Right: feature list -->
-    <div class="parents-features">
-
-      <div class="parent-feature">
-        <div class="pf-icon" style="background:rgba(37,99,235,0.12);color:var(--blue-light)">📍</div>
-        <div>
-          <h4 data-i18n="pf1_title">Live location tracking</h4>
-          <p data-i18n="pf1_body">See exactly where your child is on the map in real time. Know when they leave school and when they arrive home safely.</p>
-        </div>
-      </div>
-
-      <div class="parent-feature">
-        <div class="pf-icon" style="background:rgba(239,68,68,0.12);color:var(--red)">🔔</div>
-        <div>
-          <h4 data-i18n="pf2_title">Instant danger zone alerts</h4>
-          <p data-i18n="pf2_body">Get notified the moment your child enters a railway crossing or busy intersection — and when they've passed through safely.</p>
-        </div>
-      </div>
-
-      <div class="parent-feature">
-        <div class="pf-icon" style="background:rgba(16,185,129,0.12);color:var(--green)">🎧</div>
-        <div>
-          <h4 data-i18n="pf3_title">Force-pause mode for children</h4>
-          <p data-i18n="pf3_body">Set your child's profile to always pause music near danger zones — they cannot override it. Peace of mind, guaranteed.</p>
-        </div>
-      </div>
-
-      <div class="parent-feature">
-        <div class="pf-icon" style="background:rgba(245,158,11,0.12);color:var(--amber)">🛡️</div>
-        <div>
-          <h4 data-i18n="pf4_title">Safe route history</h4>
-          <p data-i18n="pf4_body">Review your child's daily routes, how many danger zones they crossed, and how many times CrossAware intervened.</p>
-        </div>
-      </div>
-
-      <div class="parent-feature">
-        <div class="pf-icon" style="background:rgba(139,92,246,0.12);color:#A78BFA">👤</div>
-        <div>
-          <h4 data-i18n="pf5_title">Up to 5 child profiles</h4>
-          <p data-i18n="pf5_body">Manage multiple children from one parent account. Each child gets their own settings, history and alert preferences.</p>
-        </div>
-      </div>
-
-    </div>
-  </div>
-
-  <!-- Age recommendation banner -->
-  <div class="age-banner reveal">
-    <div class="age-item">
-      <div class="age-icon">🧒</div>
-      <div class="age-label" data-i18n="age1_label">Ages 8–12</div>
-      <div class="age-desc" data-i18n="age1_desc">Full parent control. Force-pause always on. Location shared with parents.</div>
-    </div>
-    <div class="age-divider"></div>
-    <div class="age-item">
-      <div class="age-icon">🧑</div>
-      <div class="age-label" data-i18n="age2_label">Ages 13–16</div>
-      <div class="age-desc" data-i18n="age2_desc">Parent notifications on. Child can adjust volume settings within safe limits.</div>
-    </div>
-    <div class="age-divider"></div>
-    <div class="age-item">
-      <div class="age-icon">🧑‍💼</div>
-      <div class="age-label" data-i18n="age3_label">Ages 17+</div>
-      <div class="age-desc" data-i18n="age3_desc">Independent mode. Optional location sharing. Full personal control.</div>
-    </div>
-  </div>
-
 </section>
 
 <!-- Final CTA -->
@@ -1736,7 +1538,7 @@
 <section class="section" style="padding-top:60px;padding-bottom:40px">
   <div class="section-label" style="text-align:center" data-i18n="fits_label">HOW IT FITS IN</div>
   <h2 style="text-align:center;margin-bottom:20px" data-i18n="fits_h2">CrossAware and family-locator apps<br><span style="color:var(--muted);font-size:0.6em">A complement, not a replacement</span></h2>
-  <p style="max-width:640px;margin:0 auto 30px;text-align:center;color:#9CA3AF;font-size:14.5px;line-height:1.7" data-i18n="fits_intro">Searching for a Life360, Findmykids, Qustodio or Family Link alternative? Here's an honest answer: CrossAware isn't that. Family-locator apps are designed to show you <em>where</em> your family is. CrossAware is designed to act <em>as a danger zone approaches</em> — automatically lowering your media volume and giving a short voice alert near a railway crossing, so you can hear what's coming. You can use CrossAware on its own or alongside a family-locator app.</p>
+  <p style="max-width:640px;margin:0 auto 30px;text-align:center;color:#9CA3AF;font-size:14.5px;line-height:1.7" data-i18n="fits_intro">Looking for a Life360, Findmykids, Qustodio or Family Link alternative? CrossAware isn't one. Family-locator apps show <em>where</em> someone is. CrossAware acts <em>at the crossing</em>: it turns media down and gives a short voice alert so you hear what's coming. Use it on its own or alongside a family-locator app.</p>
   <div style="max-width:720px;margin:0 auto;overflow-x:auto">
   <table style="width:100%;border-collapse:collapse;font-size:14.5px">
     <tr style="border-bottom:1px solid rgba(255,255,255,0.12)">
@@ -1773,6 +1575,18 @@
       <h3 style="font-size:16px;margin-bottom:8px" data-i18n="faq_q4">Is there a Findmykids (Pingo) alternative?</h3>
       <p style="color:#9CA3AF;font-size:14px;line-height:1.6;margin:0" data-i18n="faq_a4">If you already use Findmykids (Pingo) to see your child's location, CrossAware isn't a replacement — it's a different kind of tool. Findmykids is designed to show where your child is on the map; CrossAware automatically lowers their media volume and gives a voice alert as they approach a danger zone, so they can hear a train or car coming. The two can be used side by side.</p>
     </div>
+    <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);border-radius:16px;padding:20px 22px">
+      <h3 style="font-size:16px;margin-bottom:8px" data-i18n="faq_q5">Does CrossAware pause my music?</h3>
+      <p style="color:#9CA3AF;font-size:14px;line-height:1.6;margin:0" data-i18n="faq_a5">No. It lowers media volume to about a fifth near a danger zone and plays a short "Be aware!", so you still hear what is around you. Volume comes back when you are clear.</p>
+    </div>
+    <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);border-radius:16px;padding:20px 22px">
+      <h3 style="font-size:16px;margin-bottom:8px" data-i18n="faq_q6">Is CrossAware available on iPhone?</h3>
+      <p style="color:#9CA3AF;font-size:14px;line-height:1.6;margin:0" data-i18n="faq_a6">Not yet. CrossAware is in Android beta with testers in Riga. An iPhone version is planned.</p>
+    </div>
+    <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);border-radius:16px;padding:20px 22px">
+      <h3 style="font-size:16px;margin-bottom:8px" data-i18n="faq_q7">Does CrossAware store my location?</h3>
+      <p style="color:#9CA3AF;font-size:14px;line-height:1.6;margin:0" data-i18n="faq_a7">No. Your location is checked against danger zones on your phone. Our server stores only zone entry and exit events, without coordinates, and deletes them after 90 days.</p>
+    </div>
   </div>
   <p style="color:#6B7280;font-size:12px;line-height:1.5;margin:24px auto 0;max-width:720px;text-align:center" data-i18n="tm_note">Life360, Findmykids, Pingo, Qustodio and Google Family Link are trademarks of their respective owners. CrossAware is not affiliated with, endorsed by or sponsored by them.</p>
 </section>
@@ -1782,8 +1596,10 @@
 {
   "@context": "https://schema.org",
   "@type": "Organization",
+  "@id": "https://crossaware.com/#organization",
   "name": "CrossAware",
   "url": "https://crossaware.com",
+  "logo": "https://crossaware.com/og-image.png",
   "email": "hello@crossaware.com",
   "foundingLocation": {
     "@type": "Place",
@@ -1792,16 +1608,6 @@
   "parentOrganization": {
     "@type": "Organization",
     "name": "DAGAR SIA"
-  },
-  "funder": {
-    "@type": "Organization",
-    "name": "EIT Urban Mobility",
-    "url": "https://www.eiturbanmobility.eu"
-  },
-  "memberOf": {
-    "@type": "Organization",
-    "name": "VEFRESH",
-    "url": "https://www.vefresh.com"
   }
 }
 </script>
@@ -1810,9 +1616,11 @@
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   "name": "CrossAware",
-  "applicationCategory": "SafetyApplication",
+  "applicationCategory": "UtilitiesApplication",
   "operatingSystem": "Android",
-  "description": "CrossAware is a personal safety app for pedestrians and cyclists. It automatically lowers media volume (music, podcasts, video, games) near danger zones such as railway crossings and dangerous intersections, and restores it once you are clear. It complements family-safety apps like Life360, Findmykids (Pingo), Qustodio and Google Family Link by adding automatic, on-device audio protection."
+  "url": "https://crossaware.com/",
+  "publisher": { "@id": "https://crossaware.com/#organization" },
+  "description": "CrossAware is a personal safety app for pedestrians and cyclists in Riga (Android beta). It lowers media volume (music, podcasts, video, games) and plays a short spoken warning near railway crossings, tram crossings and dangerous intersections, and restores it once you are clear. It is not a family-locator app; it can be used alongside apps like Life360."
 }
 </script>
 <script type="application/ld+json">
@@ -1850,6 +1658,30 @@
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "If you already use Findmykids (Pingo) to see your child's location, CrossAware isn't a replacement — it's a different kind of tool. Findmykids is designed to show where your child is on the map; CrossAware automatically lowers their media volume and gives a voice alert as they approach a danger zone, so they can hear a train or car coming. The two can be used side by side."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does CrossAware pause my music?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. It lowers media volume to about a fifth near a danger zone and plays a short \"Be aware!\", so you still hear what is around you. Volume comes back when you are clear."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is CrossAware available on iPhone?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not yet. CrossAware is in Android beta with testers in Riga. An iPhone version is planned."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does CrossAware store my location?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Your location is checked against danger zones on your phone. Our server stores only zone entry and exit events, without coordinates, and deletes them after 90 days."
       }
     }
   ]
@@ -1915,7 +1747,6 @@
     <a href="/privacy.html" data-i18n="footer_privacy">Privacy</a>
     <a href="/terms.html" data-i18n="footer_terms">Terms</a>
     <a href="#" onclick="openContact();return false;" data-i18n="footer_contact">Contact</a>
-    <a href="#" data-i18n="footer_press">Press</a>
   </div>
 </footer>
 
@@ -1936,7 +1767,7 @@
     <a href="tel:+37129185303" style="display:flex;align-items:center;gap:14px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:12px;padding:16px 20px;text-decoration:none;transition:background 0.2s;" onmouseover="this.style.background='rgba(255,255,255,0.1)'" onmouseout="this.style.background='rgba(255,255,255,0.06)'">
       <span style="font-size:22px;">📞</span>
       <div style="text-align:left;">
-        <div style="font-size:11px;color:rgba(255,255,255,0.35);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:2px;">Telefons</div>
+        <div style="font-size:11px;color:rgba(255,255,255,0.35);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:2px;" data-i18n="contact_phone">Phone</div>
         <div style="color:#fff;font-size:15px;font-weight:500;">+371 29 185 303</div>
       </div>
     </a>
@@ -1949,7 +1780,7 @@
     en: {
       fits_label: 'How it fits in',
       fits_h2: "CrossAware and family-locator apps<br><span style=\"color:var(--muted);font-size:0.6em\">A complement, not a replacement</span>",
-      fits_intro: "Searching for a Life360, Findmykids, Qustodio or Family Link alternative? Here's an honest answer: CrossAware isn't that. Family-locator apps are designed to show you <em>where</em> your family is. CrossAware is designed to act <em>as a danger zone approaches</em> — automatically lowering your media volume and giving a short voice alert near a railway crossing, so you can hear what's coming. You can use CrossAware on its own or alongside a family-locator app.",
+      fits_intro: "Looking for a Life360, Findmykids, Qustodio or Family Link alternative? CrossAware isn't one. Family-locator apps show <em>where</em> someone is. CrossAware acts <em>at the crossing</em>: it turns media down and gives a short voice alert so you hear what's coming. Use it on its own or alongside a family-locator app.",
       fits_col_e: "Family-locator apps (e.g. Life360)",
       fits_r1_l: 'What it does',
       fits_r1_c: "Automatic volume drop and voice alert at danger zones",
@@ -1966,7 +1797,7 @@
       faq_h2: 'Frequently asked questions',
       tm_note: "Life360, Findmykids, Pingo, Qustodio and Google Family Link are trademarks of their respective owners. CrossAware is not affiliated with, endorsed by or sponsored by them.",
       ba_before_label: "❌ Before CrossAware",
-      supported_by: "Supported by",
+      supported_by: "Participant · <a href=\"https://www.urbanmobility.io\" target=\"_blank\" rel=\"noopener\" style=\"color:inherit\">Urban Mobility Incubator 2026</a>, supported by EIT Urban Mobility",
       footer_terms: "Terms",
       faq_q1: 'What is a personal safety app?',
       faq_a1: 'A personal safety app is software that helps protect you during everyday activities like walking, cycling, or commuting. CrossAware is a personal safety app that works automatically in the background, lowering your media volume near danger zones so you can hear approaching traffic and trains.',
@@ -1976,11 +1807,22 @@
       faq_a3: "GPS trackers and family-locator apps are designed to show where a child is. CrossAware adds a different layer: it automatically lowers media volume and gives a voice alert near danger zones, so a child can hear what's coming. Parents can use it alongside a GPS tracker.",
       faq_q4: 'Is there a Findmykids (Pingo) alternative?',
       faq_a4: "If you already use Findmykids (Pingo) to see your child's location, CrossAware isn't a replacement — it's a different kind of tool. Findmykids is designed to show where your child is on the map; CrossAware automatically lowers their media volume and gives a voice alert as they approach a danger zone, so they can hear a train or car coming. The two can be used side by side.",
+      faq_q5: "Does CrossAware pause my music?",
+      faq_a5: "No. It lowers media volume to about a fifth near a danger zone and plays a short \"Be aware!\", so you still hear what is around you. Volume comes back when you are clear.",
+      faq_q6: "Is CrossAware available on iPhone?",
+      faq_a6: "Not yet. CrossAware is in Android beta with testers in Riga. An iPhone version is planned.",
+      faq_q7: "Does CrossAware store my location?",
+      faq_a7: "No. Your location is checked against danger zones on your phone. Our server stores only zone entry and exit events, without coordinates, and deletes them after 90 days.",
       nav_cta: "Join Android beta",
       hero_badge: "Android beta testing now · iOS planned · Riga, Latvia",
-      hero_h1a: 'Walk. Ride.',
-      hero_h1b: 'Listen Safely.',
-      hero_sub: "CrossAware turns your music, podcasts and videos down as you approach a railway crossing or dangerous intersection, so you hear the train or car in time. Volume comes back when you are clear.<br><span style=\"font-size:0.7em;color:#9CA3AF;font-weight:400\">A personal safety app for pedestrians and cyclists. Designed to complement family-safety apps such as Life360, Findmykids (Pingo), Qustodio or Google Family Link.</span>",
+      hero_h1a: "Hear. Cross.",
+      hero_h1b: "Carry on.",
+      hero_h1c: "The safety app for pedestrians and cyclists who wear headphones",
+      mock_alerts: "Alerts today",
+      mock_zones: "Zones nearby",
+      mock_on: "On",
+      mock_bg: "Background",
+      hero_sub: "CrossAware turns your music, podcasts and videos down as you approach a railway crossing or dangerous intersection in Riga, so you hear the train or car in time. Volume comes back when you are clear.",
       android_first: 'Android First',
       launching_soon: "Beta",
       plat_android: '🤖 Android',
@@ -1992,75 +1834,57 @@
       problem_label: 'The Problem',
       problem_stat_a: "of 116 recorded crashes with pedestrians wearing headphones involved a train",
       problem_stat_b: "<a href=\"https://doi.org/10.1136/injuryprev-2011-040161\" target=\"_blank\" rel=\"noopener\" style=\"color:inherit\">Lichenstein et al., Injury Prevention, 2012</a> · USA, 2004–2011",
-      prob1_title: 'Headphones block critical audio cues',
-      prob1_body: "You can't hear oncoming trains, car horns, or warning signals when music is playing at full volume.",
-      prob2_title: "Podcasts and videos pull you in too",
-      prob2_body: "A gripping podcast or a video on the move splits your attention just like loud music, and the sound still masks an approaching train.",
-      prob3_title: 'Manual pausing is unreliable',
-      prob3_body: 'Reaching for your phone at a crossing takes attention away from the road at the worst possible moment.',
-      prob4_title: "Danger zones are on every route",
-      prob4_body: "Railway crossings, tram tracks and busy intersections across the city. Most pedestrians and cyclists don't know them all, and safety shouldn't depend on memorising a map.",
+      prob1_title: "Headphones mask the train",
+      prob1_body: "Music, a podcast or a video at full volume covers the train horn, the tram bell and the car you did not see.",
+      prob3_title: "You can't remember every crossing",
+      prob3_body: "Railway crossings, tram tracks and busy junctions are on every route. Reaching for your phone at the crossing is the worst moment to look away.",
       how_label: 'How It Works',
-      how_h2a: 'Three steps.',
-      how_h2b: 'Zero effort.',
-      step1_title: 'We track your location',
-      step1_body: 'CrossAware uses GPS to know exactly where you are. Danger zone detection happens right on your device — if you create an account, your activity history is securely stored to power your safety stats.',
-      step2_title: 'We detect your speed',
-      step2_body: "Walking or cycling? CrossAware is on. Moving at car speed? Alerts stay off.",
-      step3_title: "Your music turns down automatically",
-      step3_body: "Within 15 metres of a danger zone, media volume drops automatically. Once you are clear, it goes back to where it was.",
+      how_h2a: "How CrossAware works",
+      how_h2b: "in three steps",
+      step1_title: "Your phone knows the danger zones",
+      step1_body: "Riga's railway crossings, tram crossings and busy junctions are loaded on your phone. Your location is checked against them on the device; it is not sent to our servers.",
+      step2_title: "On foot or by bike only",
+      step2_body: "Walking or cycling, CrossAware is on. At car speed, alerts stay off.",
+      step3_title: "Volume drops, you hear a warning",
+      step3_body: "About 15 metres before a danger zone, media volume drops and a short voice says \"Be aware!\". Once you are clear, volume goes back to where it was.",
       demo_label: 'Try It Yourself',
-      demo_h2a: 'See the app in action',
-      demo_h2b: 'before you install it.',
-      demo_body: 'Tap through the full CrossAware experience — onboarding, permissions, and the moment your music turns down at a railway crossing. Works right in your browser, no download needed.',
+      demo_h2a: "Try the app",
+      demo_h2b: "in your browser",
+      demo_body: "A 2-minute clickable prototype: set-up, permissions and the moment your music turns down at a railway crossing.",
       demo_cta: '▶ Launch interactive demo',
-      demo_note: "2-minute clickable prototype of the Android app",
       sound_label: 'What Gets Controlled',
-      sound_h2a: 'Not just music.',
-      sound_h2b: "All media audio.",
+      sound_h2a: "What CrossAware turns down:",
+      sound_h2b: "all media audio",
       sound1_title: 'Music & Podcasts',
       sound1_body: 'Spotify, Apple Music, YouTube Music, podcasts, audiobooks',
       sound1_tag: "🔉 Volume lowered",
-      sound2_title: "Phone calls",
-      sound2_body: "Lowering call volume near danger zones is planned. It is not in the current version.",
+      sound2_title: "Calls: not yet",
+      sound2_body: "Phone and video calls are not controlled. Lowering call volume is planned.",
       sound2_tag: "🕓 Phase 2 · planned",
       sound3_title: "Video",
       sound3_body: "YouTube, TikTok, Netflix, Instagram: any app that plays through media volume.",
       sound3_tag: "🔉 Volume lowered",
       sound4_title: 'Mobile Games',
-      sound4_body: "In-game sound and background music, lowered near danger zones so you stay aware of your surroundings.",
+      sound4_body: "In-game sound and music.",
       sound4_tag: '🔉 Audio lowered',
       ba_before_body: "Crossing the railway on Maskavas iela with Spotify at full volume. The train horn is lost in the music.",
       ba_after_label: '✅ With CrossAware',
       ba_after_body: "Volume drops, a short voice says \"Be aware!\", you hear the train. Your music comes back once you are clear.",
       feat_label: 'Features',
-      feat_h2a: 'Built for how',
-      feat_h2b: 'you actually move.',
+      feat_h2a: "Features",
+      feat_h2b: "for walking and cycling in Riga",
       feat1_title: 'Riga Danger Zone Map',
       feat1_body: "Pre-loaded with railway crossings, tram crossings and busy intersections across Riga, based on OpenStreetMap data.",
       feat2_title: "Walking & Cycling Only",
       feat2_body: "Speed detection turns alerts off when you move at car speed, so they don't fire while you drive.",
       feat3_title: "Works in the Background",
       feat3_body: "Zone monitoring uses Android's built-in geofencing. It keeps working with the app closed and after a phone restart.",
-      feat4_title: 'Activity Insights',
-      feat4_body: "See how many times CrossAware stepped in and which danger zones you pass most often.",
-      feat5_title: "Volume Drops Automatically",
-      feat5_body: "Spotify, YouTube Music, podcasts, audiobooks: whatever is playing turns down as you enter a danger zone and comes back when you are clear.",
-      feat6_title: "Call volume (planned)",
-      feat6_body: "Lowering call volume near danger zones is on the roadmap. Today CrossAware controls media audio only: music, podcasts, video and games.",
       feat7_title: "Spoken warning",
-      feat7_body: "As you enter a danger zone you hear a short \"Be aware!\" over your media and get a notification. No need to look at the screen.",
-      feat8_title: 'More Cities Coming',
-      feat8_body: "Starting with Riga, then expanding across Latvia and the Baltics.",
-      phase2: 'Phase 2',
+      feat7_body: "A short spoken \"Be aware!\" (English) and a notification. No need to look at the screen.",
       roadmap_label: 'Roadmap',
-      roadmap_h2a: "How we're",
-      roadmap_h2b: 'getting there.',
-      rm1_phase: 'Now — Done',
-      rm1_title: 'Concept & Prototype',
-      rm1_body: 'App design complete. All screens, logic, and danger zone data for Riga mapped out and ready for development.',
-      rm1_tag: '✅ Complete',
-      rm2_phase: "Phase 1 — Beta testing",
+      roadmap_h2a: "Roadmap:",
+      roadmap_h2b: "Android now, iOS next",
+      rm2_phase: "Now — Android beta",
       rm2_title: 'Android MVP',
       rm2_body: "Native Android app: on-device danger-zone detection, automatic media volume drop and a spoken warning, Riga danger zones pre-loaded. The Android beta is running with testers.",
       rm2_tag: "🤖 Android beta",
@@ -2069,8 +1893,8 @@
       rm3_body: "Planned: the same features for iPhone, then App Store launch.",
       rm3_tag: "🍎 iOS planned",
       rm4_phase: 'Phase 3 — Growth',
-      rm4_title: 'Beyond Riga',
-      rm4_body: 'Tallinn, Vilnius, then all of Europe. Community-reported hazards. Apple Watch & Wear OS support. Gamification.',
+      rm4_title: "Later: more cities and parent features",
+      rm4_body: "Planned, no dates yet: other Latvian and Baltic cities, reporting hazards from the app and features for parents.",
       rm4_tag: '🌍 Future',
       cta_label: "Android beta",
       cta_h2a: "Try it before",
@@ -2083,46 +1907,12 @@
       footer_contact: 'Contact',
       contact_title: 'Get in touch',
       contact_sub: 'We\'re happy to answer any questions about CrossAware.',
-      footer_press: 'Press',
-      parents_label: 'For Parents',
-      parents_h2a: 'Keep your kids safe',
-      parents_h2b: 'on every walk to school.',
-      parents_intro: "Children are the most vulnerable pedestrians. CrossAware's Parent Dashboard gives you full visibility and control over how your child uses the app — so you can let them walk independently without losing peace of mind.",
-      pdc_title: 'Parent Dashboard',
-      pdc_sub: '2 children monitored',
-      pdc_live: 'CONCEPT PREVIEW',
-      child1_name: 'Marta, 11',
-      child1_status: 'Walking to school · 0.8km away',
-      child2_name: 'Toms, 14',
-      child2_status: 'Cycling home · 1.2km away',
-      status_safe: 'Safe',
-      status_danger: 'Danger',
-      status_warning: 'Warning',
-      pdc_log_title: "Today's alerts",
-      log1: 'Marta passed Maskavas iela crossing safely',
-      log2: "Volume lowered: Toms near Brīvības crossing",
-      log3: "Toms cleared the danger zone. Volume restored.",
-      pf1_title: 'Live location tracking',
-      pf1_body: 'See exactly where your child is on the map in real time. Know when they leave school and when they arrive home safely.',
-      pf2_title: 'Instant danger zone alerts',
-      pf2_body: 'Get notified the moment your child enters a railway crossing or busy intersection — and when they\'ve passed through safely.',
-      pf3_title: 'Force-pause mode for children',
-      pf3_body: "Set your child's profile to always pause music near danger zones — they cannot override it. Peace of mind, guaranteed.",
-      pf4_title: 'Safe route history',
-      pf4_body: "Review your child's daily routes, how many danger zones they crossed, and how many times CrossAware intervened.",
-      pf5_title: 'Up to 5 child profiles',
-      pf5_body: 'Manage multiple children from one parent account. Each child gets their own settings, history and alert preferences.',
-      age1_label: 'Ages 8–12',
-      age1_desc: 'Full parent control. Force-pause always on. Location shared with parents.',
-      age2_label: 'Ages 13–16',
-      age2_desc: 'Parent notifications on. Child can adjust volume settings within safe limits.',
-      age3_label: 'Ages 17+',
-      age3_desc: 'Independent mode. Optional location sharing. Full personal control.',
+      contact_phone: "Phone",
     },
     lv: {
       fits_label: 'Kā tas iederas',
       fits_h2: "CrossAware un ģimenes atrašanās vietas lietotnes<br><span style=\"color:var(--muted);font-size:0.6em\">Papildinājums, nevis aizvietotājs</span>",
-      fits_intro: "Meklē Life360, Findmykids, Qustodio vai Family Link alternatīvu? Godīga atbilde: CrossAware nav tāda. Ģimenes atrašanās vietas lietotnes ir paredzētas, lai rādītu, <em>kur</em> atrodas tava ģimene. CrossAware ir paredzēts, lai rīkotos, <em>tuvojoties bīstamai vietai</em> — automātiski samazinot mediju skaļumu un dodot īsu balss brīdinājumu pie dzelzceļa pārbrauktuves, lai tu dzirdētu, kas tuvojas. CrossAware var lietot atsevišķi vai kopā ar atrašanās vietas lietotni.",
+      fits_intro: "Meklē Life360, Findmykids, Qustodio vai Family Link alternatīvu? CrossAware tāda nav. Atrašanās vietas lietotnes rāda, <em>kur</em> kāds ir. CrossAware rīkojas <em>pie pārejas</em>: pieklusina mediju skaņu un dod īsu balss brīdinājumu, lai tu dzirdētu, kas tuvojas. Lieto to atsevišķi vai kopā ar atrašanās vietas lietotni.",
       fits_col_e: "Atrašanās vietas lietotnes (piem., Life360)",
       fits_r1_l: 'Ko tas dara',
       fits_r1_c: "Automātiska skaļuma samazināšana un balss brīdinājums bīstamajās vietās",
@@ -2139,7 +1929,7 @@
       faq_h2: 'Biežāk uzdotie jautājumi',
       tm_note: "Life360, Findmykids, Pingo, Qustodio un Google Family Link ir to attiecīgo īpašnieku preču zīmes. CrossAware nav ar tiem saistīts, un tie CrossAware neatbalsta un nesponsorē.",
       ba_before_label: "❌ Bez CrossAware",
-      supported_by: "Atbalsta",
+      supported_by: "Dalībnieks · <a href=\"https://www.urbanmobility.io\" target=\"_blank\" rel=\"noopener\" style=\"color:inherit\">Urban Mobility Incubator 2026</a>, ko atbalsta EIT Urban Mobility",
       footer_terms: "Noteikumi",
       faq_q1: 'Kas ir personīgās drošības lietotne?',
       faq_a1: 'Personīgās drošības lietotne ir programmatūra, kas palīdz pasargāt tevi ikdienas gaitās — ejot kājām, braucot ar velosipēdu vai pārvietojoties. CrossAware ir personīgās drošības lietotne, kas darbojas automātiski fonā, pieklusinot mediju skaļumu pie bīstamajām vietām, lai tu sadzirdi tuvojošos satiksmi un vilcienus.',
@@ -2149,11 +1939,22 @@
       faq_a3: "GPS izsekotāji un atrašanās vietas lietotnes ir paredzētas, lai rādītu, kur atrodas bērns. CrossAware pievieno citu slāni: tas automātiski samazina mediju skaļumu un dod balss brīdinājumu pie bīstamajām vietām, lai bērns dzirdētu, kas tuvojas. Vecāki to var lietot kopā ar GPS izsekotāju.",
       faq_q4: 'Vai ir Findmykids (Pingo) alternatīva?',
       faq_a4: "Ja jau lieto Findmykids (Pingo), lai redzētu bērna atrašanās vietu, CrossAware nav aizvietotājs — tas ir cita veida rīks. Findmykids ir paredzēts, lai rādītu bērna atrašanās vietu kartē; CrossAware automātiski samazina mediju skaļumu un dod balss brīdinājumu, bērnam tuvojoties bīstamai vietai, lai viņš sadzirdētu vilcienu vai auto. Abas var lietot līdzās.",
+      faq_q5: "Vai CrossAware aptur mūziku?",
+      faq_a5: "Nē. Pie bīstamās vietas tas samazina mediju skaļumu līdz apmēram piektdaļai un atskaņo īsu „Be aware!”, lai tu dzirdētu apkārtni. Kad esi garām, skaļums atgriežas.",
+      faq_q6: "Vai CrossAware ir pieejams iPhone?",
+      faq_a6: "Vēl nav. CrossAware ir Android beta versijā ar testētājiem Rīgā. iPhone versija ir plānota.",
+      faq_q7: "Vai CrossAware glabā manu atrašanās vietu?",
+      faq_a7: "Nē. Atrašanās vieta tiek salīdzināta ar bīstamajām vietām tavā tālrunī. Serveris glabā tikai zonu ieejas un izejas notikumus bez koordinātām un dzēš tos pēc 90 dienām.",
       nav_cta: "Pieteikties Android beta",
       hero_badge: "Android beta testēšanā · iOS plānots · Rīga, Latvija",
-      hero_h1a: 'Staigā. Brauc.',
-      hero_h1b: 'Klausies droši.',
-      hero_sub: "CrossAware automātiski pieklusina mūziku, podkāstus un video, kad tuvojies dzelzceļa pārbrauktuvei vai bīstamam krustojumam, lai laikus sadzirdi vilcienu vai auto. Kad esi garām, skaļums atgriežas.<br><span style=\"font-size:0.7em;color:#9CA3AF;font-weight:400\">Personīgās drošības lietotne gājējiem un velosipēdistiem. Paredzēta kā papildinājums ģimenes drošības lietotnēm, piemēram, Life360, Findmykids (Pingo), Qustodio vai Google Family Link.</span>",
+      hero_h1a: "Sadzirdi. Šķērso.",
+      hero_h1b: "Turpini.",
+      hero_h1c: "Drošības lietotne gājējiem un velosipēdistiem, kas klausās austiņās",
+      mock_alerts: "Brīdinājumi šodien",
+      mock_zones: "Zonas tuvumā",
+      mock_on: "Ieslēgts",
+      mock_bg: "Fonā",
+      hero_sub: "CrossAware pieklusina mūziku, podkāstus un video, kad tuvojies dzelzceļa pārbrauktuvei vai bīstamam krustojumam Rīgā, lai laikus sadzirdētu vilcienu vai auto. Kad esi garām, skaļums atgriežas.",
       android_first: 'Android pirmais',
       launching_soon: "Beta",
       plat_android: '🤖 Android',
@@ -2165,75 +1966,57 @@
       problem_label: 'Problēma',
       problem_stat_a: "no 116 reģistrētiem negadījumiem ar gājējiem austiņās bija iesaistīts vilciens",
       problem_stat_b: "<a href=\"https://doi.org/10.1136/injuryprev-2011-040161\" target=\"_blank\" rel=\"noopener\" style=\"color:inherit\">Lichenstein et al., Injury Prevention, 2012</a> · ASV, 2004–2011",
-      prob1_title: 'Austiņas bloķē svarīgus skaņas signālus',
-      prob1_body: 'Pilnā skaļumā spēlējot mūziku, nevar dzirdēt vilcienus, auto signālus vai brīdinājumus.',
-      prob2_title: "Podkāsti un video ievelk tikpat",
-      prob2_body: "Aizraujošs podkāsts vai video ceļā sadala uzmanību tāpat kā skaļa mūzika, un skaņa joprojām aizsedz tuvojošos vilcienu.",
-      prob3_title: 'Manuāla apturēšana nav uzticama',
-      prob3_body: 'Sniedzieties pēc tālruņa pie krustojuma, jūs novirzāt uzmanību no ceļa visnepiemērotākajā brīdī.',
-      prob4_title: "Bīstamās vietas ir katrā maršrutā",
-      prob4_body: "Dzelzceļa pārbrauktuves, tramvaja sliedes un noslogoti krustojumi visā pilsētā. Lielākā daļa gājēju un velosipēdistu tās visas nezina, un drošībai nevajadzētu būt atkarīgai no kartes iegaumēšanas.",
+      prob1_title: "Austiņas aizsedz vilcienu",
+      prob1_body: "Mūzika, podkāsts vai video pilnā skaļumā aizsedz vilciena signālu, tramvaja zvanu un auto, ko neredzēji.",
+      prob3_title: "Visas pārejas atcerēties nevar",
+      prob3_body: "Dzelzceļa pārbrauktuves, tramvaja sliedes un noslogoti krustojumi ir katrā maršrutā. Sniegties pēc tālruņa pie pārejas ir sliktākais brīdis, lai novērstos.",
       how_label: 'Kā tas darbojas',
-      how_h2a: 'Trīs soļi.',
-      how_h2b: 'Nulles piepūle.',
-      step1_title: 'Mēs izsekojam jūsu atrašanās vietu',
-      step1_body: 'CrossAware izmanto GPS, lai precīzi zinātu, kur atrodaties. Bīstamo zonu noteikšana notiek jūsu ierīcē — ja izveidojat kontu, jūsu aktivitātes vēsture tiek droši glabāta, lai nodrošinātu drošības statistiku.',
-      step2_title: 'Mēs nosakām jūsu ātrumu',
-      step2_body: "Ejat vai braucat ar velosipēdu? CrossAware ir gatavs. Pārvietojaties automašīnas ātrumā? Brīdinājumi netiek rādīti.",
-      step3_title: "Mūzika pieklust automātiski",
-      step3_body: "15 metru attālumā no bīstamās zonas mediju skaļums automātiski samazinās. Kad esat garām, tas atgriežas iepriekšējā līmenī.",
+      how_h2a: "Kā CrossAware darbojas",
+      how_h2b: "trīs soļos",
+      step1_title: "Tālrunis zina bīstamās vietas",
+      step1_body: "Rīgas dzelzceļa pārbrauktuves, tramvaja pārejas un noslogoti krustojumi ir ielādēti tavā tālrunī. Atrašanās vieta tiek salīdzināta ar tiem ierīcē un netiek sūtīta uz mūsu serveriem.",
+      step2_title: "Tikai ejot vai ar velosipēdu",
+      step2_body: "Ejot vai braucot ar velosipēdu, CrossAware ir ieslēgts. Auto ātrumā brīdinājumi netiek rādīti.",
+      step3_title: "Skaļums samazinās, tu dzirdi brīdinājumu",
+      step3_body: "Apmēram 15 metrus pirms bīstamās vietas mediju skaļums samazinās un īsa balss angliski saka „Be aware!”. Kad esi garām, skaļums atgriežas iepriekšējā līmenī.",
       demo_label: 'Izmēģini pats',
-      demo_h2a: 'Apskati lietotni darbībā',
-      demo_h2b: 'pirms instalēšanas.',
-      demo_body: 'Izklikšķini pilnu CrossAware pieredzi — onboarding, atļaujas un brīdi, kad mūzika apstājas pie dzelzceļa pārbrauktuves. Darbojas tieši pārlūkā, nav nepieciešama lejupielāde.',
+      demo_h2a: "Izmēģini lietotni",
+      demo_h2b: "pārlūkā",
+      demo_body: "2 minūšu klikšķināms prototips: iestatīšana, atļaujas un brīdis, kad mūzika pieklust pie dzelzceļa pārbrauktuves.",
       demo_cta: '▶ Palaist interaktīvo demo',
-      demo_note: "2 minūšu klikšķināms Android lietotnes prototips",
       sound_label: 'Kas tiek kontrolēts',
-      sound_h2a: 'Ne tikai mūzika.',
-      sound_h2b: "Visa mediju skaņa.",
+      sound_h2a: "Ko CrossAware pieklusina:",
+      sound_h2b: "visu mediju skaņu",
       sound1_title: 'Mūzika un podkāsti',
       sound1_body: 'Spotify, Apple Music, YouTube Music, podkāsti, audiogrāmatas',
       sound1_tag: "🔉 Skaļums samazināts",
-      sound2_title: "Tālruņa zvani",
-      sound2_body: "Zvana skaļuma samazināšana bīstamo vietu tuvumā ir plānota. Pašreizējā versijā tās nav.",
+      sound2_title: "Zvani: vēl ne",
+      sound2_body: "Tālruņa un video zvani netiek vadīti. Zvanu skaļuma samazināšana ir plānota.",
       sound2_tag: "🕓 2. fāze · plānots",
       sound3_title: "Video",
       sound3_body: "YouTube, TikTok, Netflix, Instagram: jebkura lietotne, kas skan caur mediju skaļumu.",
       sound3_tag: "🔉 Skaļums samazināts",
       sound4_title: 'Mobilās spēles',
-      sound4_body: "Spēles skaņa un fona mūzika tiek pieklusināta bīstamo zonu tuvumā, lai jūs dzirdētu apkārtni.",
+      sound4_body: "Spēles skaņa un mūzika.",
       sound4_tag: '🔉 Audio samazināts',
-      ba_before_body: "Šķērsojat dzelzceļu Maskavas ielā ar Spotify pilnā skaļumā. Vilciena signāls pazūd mūzikā.",
+      ba_before_body: "Šķērso dzelzceļu Maskavas ielā ar Spotify pilnā skaļumā. Vilciena signāls pazūd mūzikā.",
       ba_after_label: '✅ Ar CrossAware',
-      ba_after_body: "Skaļums samazinās, īsa balss brīdina „Be aware!”, jūs dzirdat vilcienu. Kad esat garām, mūzika atgriežas iepriekšējā skaļumā.",
+      ba_after_body: "Skaļums samazinās, īsa balss saka „Be aware!”, tu dzirdi vilcienu. Kad esi garām, mūzika atgriežas.",
       feat_label: 'Funkcijas',
-      feat_h2a: 'Veidots tam,',
-      feat_h2b: 'kā jūs pārvietojaties.',
+      feat_h2a: "Funkcijas",
+      feat_h2b: "iešanai un braukšanai pa Rīgu",
       feat1_title: 'Rīgas bīstamo zonu karte',
       feat1_body: "Iepriekš ielādētas dzelzceļa pārbrauktuves, tramvaja šķērsojumi un noslogoti krustojumi visā Rīgā, balstoties uz OpenStreetMap datiem.",
       feat2_title: "Tikai ejot un braucot ar riteni",
-      feat2_body: "Ātruma noteikšana izslēdz brīdinājumus, kad pārvietojaties automašīnas ātrumā, lai tie nenostrādātu braucot.",
+      feat2_body: "Ātruma noteikšana izslēdz brīdinājumus auto ātrumā, lai tie nenostrādā, kad brauc ar mašīnu.",
       feat3_title: "Darbojas fonā",
-      feat3_body: "Zonu uzraudzībai izmanto Android iebūvēto ģeožogu (geofencing) mehānismu. Tā darbojas arī ar aizvērtu lietotni un pēc tālruņa restartēšanas.",
-      feat4_title: 'Aktivitātes statistika',
-      feat4_body: "Skatiet, cik reižu CrossAware iejaucās un kuras bīstamās zonas šķērsojat visbiežāk.",
-      feat5_title: "Skaļums samazinās automātiski",
-      feat5_body: "Spotify, YouTube Music, podkāsti, audiogrāmatas: viss, kas skan, tiek pieklusināts, ieejot bīstamajā zonā, un atgriežas, kad esat garām.",
-      feat6_title: "Zvana skaļums (plānots)",
-      feat6_body: "Zvana skaļuma samazināšana bīstamo vietu tuvumā ir attīstības plānā. Pašlaik CrossAware vada tikai mediju skaņu: mūziku, podkāstus, video un spēles.",
+      feat3_body: "Zonu uzraudzībai izmanto Android iebūvēto ģeožogu (geofencing). Tas darbojas arī ar aizvērtu lietotni un pēc tālruņa restartēšanas.",
       feat7_title: "Balss brīdinājums",
-      feat7_body: "Ieejot bīstamajā zonā, jūs dzirdat īsu „Be aware!” un saņemat paziņojumu. Uz ekrānu nav jāskatās.",
-      feat8_title: 'Drīzumā vairāk pilsētu',
-      feat8_body: "Sākot ar Rīgu, tad visā Latvijā un Baltijā.",
-      phase2: '2. fāze',
+      feat7_body: "Īss balss brīdinājums „Be aware!” (angliski) un paziņojums. Uz ekrānu nav jāskatās.",
       roadmap_label: 'Attīstības plāns',
-      roadmap_h2a: 'Kā mēs',
-      roadmap_h2b: 'tur nokļūsim.',
-      rm1_phase: 'Tagad — Pabeigts',
-      rm1_title: 'Koncepcija un prototips',
-      rm1_body: 'Lietotnes dizains pabeigts. Visi ekrāni, loģika un Rīgas bīstamo zonu dati izstrādāti un gatavi izstrādei.',
-      rm1_tag: '✅ Pabeigts',
-      rm2_phase: "1. fāze — Beta testēšana",
+      roadmap_h2a: "Attīstības plāns:",
+      roadmap_h2b: "tagad Android, tad iOS",
+      rm2_phase: "Tagad — Android beta",
       rm2_title: 'Android MVP',
       rm2_body: "Android lietotne: bīstamo zonu noteikšana ierīcē, automātiska mediju skaļuma samazināšana un balss brīdinājums, iepriekš ielādētas Rīgas bīstamās zonas. Android beta versiju jau lieto testētāji.",
       rm2_tag: "🤖 Android beta",
@@ -2242,11 +2025,11 @@
       rm3_body: "Plānots: tās pašas funkcijas iPhone, pēc tam publicēšana App Store.",
       rm3_tag: "🍎 iOS plānots",
       rm4_phase: '3. fāze — Izaugsme',
-      rm4_title: 'Ārpus Rīgas',
-      rm4_body: 'Tallina, Viļņa, tad visa Eiropa. Kopienas ziņotie apdraudējumi. Apple Watch un Wear OS atbalsts. Gamifikācija.',
+      rm4_title: "Vēlāk: vairāk pilsētu un funkcijas vecākiem",
+      rm4_body: "Plānots, bez datumiem: citas Latvijas un Baltijas pilsētas, bīstamu vietu ziņošana lietotnē un funkcijas vecākiem.",
       rm4_tag: '🌍 Nākotne',
       cta_label: "Android beta",
-      cta_h2a: "Izmēģiniet",
+      cta_h2a: "Izmēģini",
       cta_h2b: "pirms citiem.",
       cta_sub: "Beta laikā bez maksas. Tagad Android, iOS vēlāk. Rīga pirmā.",
       join_waitlist: "Pieteikties beta",
@@ -2256,41 +2039,7 @@
       footer_contact: 'Kontakti',
       contact_title: 'Sazinies ar mums',
       contact_sub: 'Labprāt atbildēsim uz jebkuriem jautājumiem par CrossAware.',
-      footer_press: 'Prese',
-      parents_label: 'Vecākiem',
-      parents_h2a: 'Saglabājiet bērnus drošus',
-      parents_h2b: 'katrā ceļā uz skolu.',
-      parents_intro: 'Bērni ir visvairāk neaizsargātie gājēji. CrossAware vecāku panelis sniedz jums pilnu pārraudzību un kontroli pār to, kā jūsu bērns izmanto lietotni — lai viņi varētu staigāt patstāvīgi, nedodot jums raizes.',
-      pdc_title: 'Vecāku panelis',
-      pdc_sub: '2 bērni tiek uzraudzīti',
-      pdc_live: 'KONCEPTA PRIEKŠSKATS',
-      child1_name: 'Marta, 11',
-      child1_status: 'Iet uz skolu · 0,8 km attālumā',
-      child2_name: 'Toms, 14',
-      child2_status: 'Brauc mājās ar velosipēdu · 1,2 km attālumā',
-      status_safe: 'Droši',
-      status_danger: 'Briesmas',
-      status_warning: 'Brīdinājums',
-      pdc_log_title: 'Šodienas brīdinājumi',
-      log1: 'Marta droši šķērsoja Maskavas ielas pāreju',
-      log2: "Skaļums samazināts: Toms pie Brīvības šķērsojuma",
-      log3: "Toms izgāja no bīstamās zonas. Skaļums atjaunots.",
-      pf1_title: 'Tiešraides atrašanās vietas izsekošana',
-      pf1_body: 'Reāllaikā skatiet, kur atrodas jūsu bērns kartē. Ziniet, kad viņi atstāj skolu un kad droši ierodas mājās.',
-      pf2_title: 'Tūlītēji bīstamo zonu brīdinājumi',
-      pf2_body: 'Saņemiet paziņojumu brīdī, kad jūsu bērns ienāk dzelzceļa pārejā vai noslogotā krustojumā — un kad viņš to ir drošā šķērsojis.',
-      pf3_title: 'Piespiedu pauzēšanas režīms bērniem',
-      pf3_body: 'Iestatiet bērna profilu tā, lai mūzika vienmēr apstātos bīstamo zonu tuvumā — viņi to nevar atcelt. Miers garantēts.',
-      pf4_title: 'Drošo maršrutu vēsture',
-      pf4_body: 'Pārskatiet bērna ikdienas maršrutus, cik bīstamās zonas viņš ir šķērsojis un cik reižu CrossAware iejaucās.',
-      pf5_title: 'Līdz 5 bērnu profiliem',
-      pf5_body: 'Pārvaldiet vairākus bērnus no viena vecāku konta. Katram bērnam ir savi iestatījumi, vēsture un brīdinājumu preferences.',
-      age1_label: '8–12 gadi',
-      age1_desc: 'Pilna vecāku kontrole. Piespiedu pauze vienmēr ieslēgta. Atrašanās vieta dalīta ar vecākiem.',
-      age2_label: '13–16 gadi',
-      age2_desc: 'Vecāku paziņojumi ieslēgti. Bērns var pielāgot skaļuma iestatījumus drošās robežās.',
-      age3_label: '17+ gadi',
-      age3_desc: 'Patstāvīgais režīms. Izvēles atrašanās vietas koplietošana. Pilna personīgā kontrole.',
+      contact_phone: "Tālrunis",
     }
   };
 
@@ -2418,30 +2167,6 @@
   }, { threshold: 0.15 });
 
   document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-
-  // ── Parent dashboard child status animation ────────────────────────────────
-  const childStates = [
-    { cls: 'safe',    icon: '✅', key: 'status_safe' },
-    { cls: 'warning', icon: '⚠️', key: 'status_warning' },
-    { cls: 'danger',  icon: '🚨', key: 'status_danger' },
-    { cls: 'warning', icon: '⚠️', key: 'status_warning' },
-    { cls: 'safe',    icon: '✅', key: 'status_safe' },
-  ];
-  let csi = 0;
-  function cycleChildStatus() {
-    csi = (csi + 1) % childStates.length;
-    const s = childStates[csi];
-    const row = document.getElementById('child1row');
-    const statusEl = document.getElementById('child1status');
-    const iconEl = document.getElementById('child1icon');
-    const labelEl = document.getElementById('child1label');
-    if (!statusEl) return;
-    statusEl.className = 'child-status ' + s.cls;
-    iconEl.textContent = s.icon;
-    const t = translations[currentLang];
-    labelEl.textContent = t[s.key] || s.key;
-  }
-  setInterval(cycleChildStatus, 2500);
 
   // ── Sync banner with animated SVG user dot ─────────────────────────────────
   // SVG path takes 6s total. Dot reaches railway crossing (~65% through path)

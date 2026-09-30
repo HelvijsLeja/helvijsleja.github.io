@@ -6,7 +6,7 @@ CrossAware is not a family location-tracking replacement for apps like Life360. 
 
 Company: DAGAR SIA, Riga, Latvia.
 Contact: hello@crossaware.com
-Backed by: EIT Urban Mobility (a body of the European Union) and VEFRESH (Latvia's urban mobility innovation ecosystem).
+Programme: participant in Urban Mobility Incubator 2026 (https://www.urbanmobility.io), supported by EIT Urban Mobility, an initiative of the European Institute of Innovation and Technology (EIT); partners include VEFRESH and the City of Riga.
 
 ## Product
 - [Homepage](https://crossaware.com): Product overview, how it works, FAQ.
@@ -18,7 +18,8 @@ Backed by: EIT Urban Mobility (a body of the European Union) and VEFRESH (Latvia
 - Status: Android beta, currently with testers. Not yet public on Google Play. iOS is planned; no iOS version exists yet.
 - What it controls: media audio only (music, podcasts, audiobooks, video, game audio). It does not control phone calls, video calls or meeting apps, and it does not mute the microphone.
 - Planned (not available): lowering call volume near danger zones.
-- Core mechanism: Android geofencing; within 15 metres of a danger zone, media volume is lowered and a spoken "Be aware!" warning plays; volume is restored on exit. Alerts are suppressed when the user moves at vehicle speed.
+- Core mechanism: Android geofencing; about 15 metres before a danger zone, media volume is lowered to about 20% (not paused) and a short spoken "Be aware!" (English) plays; volume is restored on exit. Alerts are suppressed at vehicle speed.
+- Planned (not available): features for parents, hazard reporting from the app, more cities. No dates.
 - Coverage: Riga, Latvia. Danger zones (railway crossings, tram crossings, busy intersections) are based on OpenStreetMap data.
 - Pricing: free during beta. Paid plans are not yet available.
 - Data privacy: continuous location is processed on-device only. The server stores only zone entry/exit events, without coordinates, and deletes them after 90 days.
