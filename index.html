@@ -432,6 +432,7 @@
     text-decoration: none;
   }
   .nav-cta:hover { background: var(--blue-light); transform: translateY(-1px); }
+  .nav-right { display: flex; align-items: center; gap: 12px; }
 
   /* ── Hero ── */
   .hero {
@@ -861,6 +862,14 @@
     .hero::after { width: 100vw; height: 100vw; }
     .final-cta::before { width: 100vw; height: 60vw; }
   }
+  /* Mobile: logo + language switcher on row 1, full-width CTA on row 2 (fits EN and longer LV) */
+  @media (max-width: 480px) {
+    nav { flex-wrap: wrap; row-gap: 8px; padding: 10px 16px; }
+    nav .logo { font-size: 18px; }
+    .nav-right { display: contents; }
+    .nav-cta { order: 3; flex: 1 0 100%; text-align: center; white-space: nowrap; padding: 10px 16px; font-size: 14px; }
+    .hero { padding-top: 150px; }
+  }
 
   .stat-big {
     font-family: 'Syne', sans-serif;
@@ -1087,7 +1096,7 @@
     <div class="logo-dot"></div>
     CrossAware
   </div>
-  <div style="display:flex;align-items:center;gap:12px;">
+  <div class="nav-right">
     <div class="lang-switcher">
       <button class="lang-btn active" id="langEN" onclick="setLang('en')">EN</button>
       <button class="lang-btn" id="langLV" onclick="setLang('lv')">LV</button>
@@ -2026,7 +2035,7 @@
       rm3_tag: "🍎 iOS plānots",
       rm4_phase: '3. fāze — Izaugsme',
       rm4_title: "Vēlāk: vairāk pilsētu un funkcijas vecākiem",
-      rm4_body: "Plānots, bez datumiem: citas Latvijas un Baltijas pilsētas, bīstamu vietu ziņošana lietotnē un funkcijas vecākiem.",
+      rm4_body: "Plānots, bez datumiem: citas Latvijas un Baltijas pilsētas, bīstamu zonu ziņošana lietotnē un funkcijas vecākiem.",
       rm4_tag: '🌍 Nākotne',
       cta_label: "Android beta",
       cta_h2a: "Izmēģini",
