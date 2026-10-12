@@ -13,6 +13,9 @@ Programme: participant in Urban Mobility Incubator 2026 (https://www.urbanmobili
 - [Interactive Prototype](https://crossaware.com/prototype.html): Clickable demo of the onboarding and danger-zone alert flow.
 - [Privacy Policy](https://crossaware.com/privacy.html): What data CrossAware collects and how it is protected.
 - [Terms of Service](https://crossaware.com/terms.html): Service terms and safety disclaimer.
+- [Privātuma politika](https://crossaware.com/lv/privacy.html): Privacy Policy in Latvian.
+- [Lietošanas noteikumi](https://crossaware.com/lv/terms.html): Terms of Service in Latvian.
+- [Delete your account](https://crossaware.com/delete-account.html): How to request account deletion and what data is deleted (English and Latvian).
 
 ## Key facts
 - Status: Android beta, currently with testers. Not yet public on Google Play. iOS is planned; no iOS version exists yet.

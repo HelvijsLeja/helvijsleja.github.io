@@ -2075,6 +2075,11 @@
       }
     });
 
+    // Footer legal links follow the language (LV pages live under /lv/)
+    const legalBase = lang === 'lv' ? '/lv' : '';
+    document.querySelector('[data-i18n="footer_privacy"]').href = legalBase + '/privacy.html';
+    document.querySelector('[data-i18n="footer_terms"]').href = legalBase + '/terms.html';
+
     // Update banner states text for phone mockup
     bannerStates[0].text = lang === 'lv' ? 'Droši — Nav bīstamu zonu tuvumā' : 'Safe — No hazards nearby';
     bannerStates[1].text = lang === 'lv' ? 'Tuvojaties bīstamajai zonai' : 'Approaching danger zone';
