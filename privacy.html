@@ -4,19 +4,22 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Privacy Policy — CrossAware</title>
-<meta name="description" content="How CrossAware handles your data: location is processed on-device, zone events are kept 90 days, and you can export or delete them anytime.">
+<meta name="description" content="How CrossAware handles your data: location is processed on your device, zone history is kept 90 days, and you can export or delete it in the app.">
 <link rel="canonical" href="https://crossaware.com/privacy.html">
+<link rel="alternate" hreflang="en" href="https://crossaware.com/privacy.html">
+<link rel="alternate" hreflang="lv" href="https://crossaware.com/lv/privacy.html">
+<link rel="alternate" hreflang="x-default" href="https://crossaware.com/privacy.html">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="CrossAware">
 <meta property="og:url" content="https://crossaware.com/privacy.html">
 <meta property="og:title" content="Privacy Policy — CrossAware">
-<meta property="og:description" content="How CrossAware handles your data: on-device location, 90-day retention, and full export/delete control.">
+<meta property="og:description" content="How CrossAware handles your data: location is processed on your device, zone history is kept 90 days, and you can export or delete it in the app.">
 <meta property="og:image" content="https://crossaware.com/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Privacy Policy — CrossAware">
-<meta name="twitter:description" content="How CrossAware handles your data: on-device location, 90-day retention, and full export/delete control.">
+<meta name="twitter:description" content="How CrossAware handles your data: location is processed on your device, zone history is kept 90 days, and you can export or delete it in the app.">
 <meta name="twitter:image" content="https://crossaware.com/og-image.png">
 <link href="/fonts/fonts.css" rel="stylesheet">
 <style>
@@ -30,6 +33,7 @@
   main{max-width:760px;margin:0 auto;padding:24px 24px 80px}
   h1{font-family:'Syne',sans-serif;font-size:clamp(28px,5vw,38px);font-weight:800;color:#fff;letter-spacing:-0.02em;margin:24px 0 8px}
   .meta{color:var(--dim);font-size:14px;margin-bottom:36px}
+  .lang{font-size:14px;margin:0}
   .tldr{background:rgba(0,201,167,0.08);border:1px solid rgba(0,201,167,0.3);border-radius:16px;padding:20px 22px;margin-bottom:36px}
   .tldr b{color:var(--teal)}
   h2{font-family:'Syne',sans-serif;font-size:21px;font-weight:700;color:#fff;margin:36px 0 12px}
@@ -45,7 +49,8 @@
   .warn b{color:#FCA5A5}
   footer{border-top:1px solid var(--border);padding:24px;text-align:center;color:var(--dim);font-size:13px}
   footer a{color:var(--dim)}
-  @media(max-width:640px){table{font-size:12.5px}th,td{padding:8px}}
+  .tscroll{overflow-x:auto}
+  @media(max-width:640px){table{font-size:12.5px;min-width:560px}th,td{padding:8px}}
 </style>
 
 </head>
@@ -55,24 +60,29 @@
   <a class="back" href="/">← Back to crossaware.com</a>
 </nav>
 <main>
+  <p class="lang"><b>English</b> · <a href="/lv/privacy.html" hreflang="lv" lang="lv">Latviešu</a></p>
   <h1>Privacy Policy</h1>
-  <div class="meta">DAGAR SIA · Reg. No. 40103579673 · Silciema iela 15 k-2 - 40, Riga, LV-1024, Latvia · Version 1.3 · Effective 30 September 2026 · Previous version: 1.1 (3 August 2026) · Contact: <a href="mailto:hello@crossaware.com">hello@crossaware.com</a></div>
+  <div class="meta">SIA "DAGAR" · Reg. No. 40103579673 · Silciema iela 15 k-2 - 40, Riga, LV-1024, Latvia · Version 1.4 · Effective 12 October 2026 · Previous version: 1.3 (30 September 2026) · Contact: <a href="mailto:hello@crossaware.com">hello@crossaware.com</a></div>
 
   <div class="tldr"><b>The short version:</b> CrossAware compares your position against our danger-zone database and lowers your media volume in real time, on your device. We do <b>not</b> keep a continuous trail of where you go. We do store a short log of the moments you enter or leave a danger zone (the zone and the time, linked to your account, but not your coordinates) so you can see your own activity history. That log is automatically deleted after 90 days, and you can export or delete it yourself at any time in the app.</div>
 
   <h2>1. Who we are</h2>
-  <p>CrossAware is a safety application operated by <b>DAGAR SIA</b> (registration No. 40103579673, legal address Silciema iela 15 k-2 - 40, Riga, LV-1024, Latvia). We are the data controller for the personal data described in this policy. For any privacy question or request, write to <a href="mailto:hello@crossaware.com">hello@crossaware.com</a>.</p>
+  <p>CrossAware is a safety application operated by <b>SIA "DAGAR"</b> (registration No. 40103579673, legal address Silciema iela 15 k-2 - 40, Riga, LV-1024, Latvia). We are the data controller for the personal data described in this policy. For any privacy question or request, write to <a href="mailto:hello@crossaware.com">hello@crossaware.com</a>.</p>
 
-  <h2>2. What data we collect — and what we deliberately don't</h2>
+  <h2 id="data">2. What data we collect — and what we deliberately don't</h2>
   <p>CrossAware is built on a privacy-by-design principle: the app's core function — comparing your position against our danger-zone database (railway crossings and dangerous intersections in Riga) and reducing media volume — runs <b>entirely on your device</b>. Because of this architecture, we collect far less than a typical location app:</p>
+  <div class="tscroll" role="region" aria-labelledby="data" tabindex="0">
   <table>
     <tr><th>Data</th><th>Where it is stored</th><th>Why we need it</th><th>How long we keep it</th></tr>
-    <tr><td>Account e-mail and an encrypted (hashed) password</td><td>Our database provider Supabase (EU region)</td><td>Sign-in and account management</td><td>Until you delete your account, plus 30 days in backups</td></tr>
+    <tr><td>Account e-mail address, a hashed password (we never store the password itself) and technical sign-in data (such as when the account was created and when you last signed in; sign-in logs may also include your IP address)</td><td>Our database provider Supabase (EU region)</td><td>Sign-in, account management and account security</td><td>Until you delete your account, plus 30 days in backups</td></tr>
+    <tr><td>Account profile and acceptance record: a copy of your e-mail address, your app settings (whether notifications and location use are switched on), the time you confirmed location use, the time you confirmed your age or a parent's or guardian's consent and accepted the Terms, and the version of the Terms accepted</td><td>Our database provider Supabase (EU region)</td><td>Saving your settings; being able to show when and which version of the Terms was accepted by the user or their parent or guardian</td><td>Until you delete your account, plus 30 days in backups</td></tr>
+    <tr><td>E-mails you send us (for example questions and requests about your data, including account deletion requests) and our replies</td><td>Our e-mail inbox; e-mail sent to hello@crossaware.com is forwarded to it by Namecheap, Inc. (USA)</td><td>Replying to you and carrying out your request; being able to show that the request was handled</td><td>General correspondence: up to 12 months after the matter is resolved. Requests about your data and our replies: 3 years after the request is completed; after account deletion we keep only this correspondence, not your account data or history</td></tr>
     <tr><td>Continuous real-time GPS position (while monitoring is active)</td><td><b>Your device only — the continuous stream is never uploaded</b></td><td>Detecting proximity to danger zones</td><td>Not stored; processed in memory and discarded</td></tr>
     <tr><td>Danger-zone entry/exit events — the zone, whether you entered or left, and the time, linked to your account (we do <b>not</b> store the GPS coordinates of the crossing)</td><td>Our database provider Supabase (EU region)</td><td>Showing your in-app activity log and recent safety statistics</td><td><b>Automatically deleted 90 days after the event.</b> You can also export or delete this history yourself in the app at any time</td></tr>
     <tr><td>Android beta sign-up (crossaware.com form): your e-mail address — it must be the e-mail of your Google account — and the platform you chose</td><td>Collected through our form provider Formspree, Inc. (USA), which forwards it to our e-mail inbox. We then add your e-mail address to the tester list of CrossAware in Google Play Console, so Google can give you access to the beta</td><td>Inviting you to the Android beta and sending you beta-related messages (e.g. new test versions, the public launch)</td><td>Deleted from Formspree once you have been invited. Kept in the Play Console tester list and our e-mail inbox while the beta runs, and deleted within 30 days after the public launch. You can leave the beta and ask us to remove your address at any time</td></tr>
     <tr><td>iOS launch notification (crossaware.com form): your e-mail address and the platform you chose</td><td>Formspree, Inc. (USA), forwarded to our e-mail inbox</td><td>Sending you one e-mail when the iOS app launches</td><td>Deleted after that e-mail is sent, and in any case by 31 March 2027, or earlier if you ask us or unsubscribe</td></tr>
   </table>
+  </div>
   <p><b>Payments:</b> CrossAware is currently free and we do not process any payment data. If we introduce paid plans, we will update this policy before they launch.</p>
   <p><b>We do not collect:</b> a continuous trail of your movements, your name, your contacts, microphone or camera data, or any advertising identifiers. We log only the discrete moments you cross into or out of a danger zone (see the table above) — not where you are the rest of the time. The background location permission Android asks for is used on your device to detect those crossings; the continuous position stream itself is never sent to us.</p>
   <p><b>When you visit crossaware.com:</b> the website uses no cookies, analytics or tracking, and loads no content from third-party servers (our fonts are hosted on our own site). Like any website host, our hosting provider GitHub processes your IP address and basic request data (such as browser type and time of the request) to deliver the pages and keep the service secure. We do not receive or use this data to identify you.</p>
@@ -81,7 +91,7 @@
   <ul>
     <li><b>Encryption:</b> all traffic between the app, the website and our servers uses TLS; data in our Supabase database is encrypted at rest.</li>
     <li><b>Access control:</b> production database access is restricted to the founder, protected by strong credentials and two-factor authentication on all critical services (Supabase, GitHub, Formspree, Google Play Console and our e-mail account).</li>
-    <li><b>Minimization:</b> if a feature does not strictly need a data point, we do not collect it — the table above is the complete list of personal data we store.</li>
+    <li><b>Minimization:</b> if a feature does not strictly need a data point, we do not collect it — the table above lists all categories of personal data we store.</li>
     <li><b>Map and zone data:</b> to show the map, the app requests map tiles from OpenStreetMap's tile servers; these requests reveal your device's IP address and the map area you are viewing. Danger-zone data is downloaded from public Overpass API servers for a fixed area covering all of Riga, so those requests reveal your IP address but not where you are. Neither includes your account. These services are operated independently by the OpenStreetMap Foundation and the Overpass server operators under their own privacy policies.</li>
     <li><b>Service providers (processors):</b> we share personal data only with providers that process it on our behalf and under a data-processing agreement (GDPR Article 28):
       <ul>
@@ -97,10 +107,10 @@
   </ul>
 
   <h2>4. Legal bases for processing (GDPR Article 6)</h2>
-  <p>We process account data and your danger-zone entry/exit history to <b>perform our contract</b> with you — providing the safety service and the in-app activity log and statistics. In line with data minimization, that history is kept for a limited 90-day window and then deleted automatically. When you ask to join the Android beta, we use your e-mail address to invite you and add you to the Google Play tester list because you have requested it, as a step before you start using the app (GDPR Article 6(1)(b)). We send the iOS launch e-mail based on your <b>consent</b> (Article 6(1)(a)). You can leave the beta or withdraw consent at any time by replying "unsubscribe" or writing to hello@crossaware.com; this does not affect messages already sent. We process website request data (IP address) to deliver and secure the website based on our <b>legitimate interest</b> in operating a secure website (Article 6(1)(f)).</p>
+  <p>We process account data and your danger-zone entry/exit history to <b>perform our contract</b> with you — providing the safety service and the in-app activity log and statistics. In line with data minimization, that history is kept for a limited 90-day window and then deleted automatically. We process your app settings likewise to perform our contract with you (GDPR Article 6(1)(b)). We keep the record of your age confirmation, Terms acceptance and location-use confirmation, and correspondence about your requests, based on our <b>legitimate interest</b> in being able to show that the contract was properly concluded and that requests were handled, and in defending our rights if necessary (Article 6(1)(f)). When you ask to join the Android beta, we use your e-mail address to invite you and add you to the Google Play tester list because you have requested it, as a step before you start using the app (GDPR Article 6(1)(b)). We send the iOS launch e-mail based on your <b>consent</b> (Article 6(1)(a)). You can leave the beta or withdraw consent at any time by replying "unsubscribe" or writing to hello@crossaware.com; this does not affect messages already sent. We process website request data (IP address) to deliver and secure the website based on our <b>legitimate interest</b> in operating a secure website (Article 6(1)(f)).</p>
 
   <h2>5. Your rights, including deletion</h2>
-  <p>Under the GDPR you have the right to access, correct, delete or export your personal data, to restrict or object to its processing, and to withdraw consent. <b>To export or delete just your danger-zone history:</b> open <b>Settings &rarr; Data &amp; Privacy</b> in the app, where you can download it as a file or delete it instantly. <b>To delete your whole account:</b> e-mail <a href="mailto:hello@crossaware.com">hello@crossaware.com</a> from your registered address — we confirm and complete deletion within 30 days, including backups within a further 30 days. You may also lodge a complaint with the Latvian Data State Inspectorate (<a href="https://www.dvi.gov.lv" rel="noopener">dvi.gov.lv</a>) or your local supervisory authority.</p>
+  <p>Under the GDPR you have the right to access, correct, delete or export your personal data, to restrict or object to its processing, and to withdraw consent. <b>To export or delete just your danger-zone history:</b> open <b>Settings &rarr; Data &amp; Privacy</b> in the app, where you can download it as a file or delete it instantly. <b>To delete your whole account:</b> use the account deletion option in the app's Settings (if your app version offers it) or e-mail <a href="mailto:hello@crossaware.com">hello@crossaware.com</a> from your registered address, as described at <a href="/delete-account.html">crossaware.com/delete-account.html</a>. We complete deletion without undue delay and within 30 days at the latest, and in backups within a further 30 days. If a request comes from a different e-mail address, we may ask you to confirm it from your registered address, so that we can make sure the account is yours. You may also lodge a complaint with the Latvian Data State Inspectorate (<a href="https://www.dvi.gov.lv" rel="noopener">dvi.gov.lv</a>) or your local supervisory authority.</p>
 
   <h2>6. Children</h2>
   <p>CrossAware has no minimum age and we do not verify users' age. It is designed to be set up and supervised by a parent or legal guardian, typically for a school-age child, and includes a parental PIN lock so a child cannot disable safety monitoring.</p>
@@ -111,6 +121,6 @@
   <h2>7. Changes to this policy</h2>
   <p>We will post any updates on this page. For material changes we will additionally notify you in the app or by e-mail before they take effect.</p>
 </main>
-<footer>CrossAware · <a href="/">crossaware.com</a> · <a href="/terms.html">Terms of Service</a> · <a href="mailto:hello@crossaware.com">hello@crossaware.com</a> · © 2026 DAGAR SIA, Riga, Latvia</footer>
+<footer>CrossAware · <a href="/">crossaware.com</a> · <a href="/terms.html">Terms of Service</a> · <a href="mailto:hello@crossaware.com">hello@crossaware.com</a> · © 2026 SIA "DAGAR", Riga, Latvia</footer>
 </body>
 </html>
