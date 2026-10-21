@@ -110,7 +110,7 @@
   /* ── Dashboard (matching src/pages/Dashboard.tsx) ── */
   .dash{padding:0 !important}
   .dash-header{position:sticky;top:0;z-index:20;background:hsl(222 47% 9% / .7);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);padding:52px 16px 14px;display:flex;align-items:center;justify-content:space-between}
-  .dash-header h1{font-size:19px;font-weight:800;letter-spacing:-.02em;display:flex;align-items:center;gap:9px}
+  .dash-header .h1{font-size:19px;font-weight:800;letter-spacing:-.02em;display:flex;align-items:center;gap:9px}
   .safety-pill{display:flex;align-items:center;gap:7px;background:var(--primary);color:#fff;border:none;border-radius:100px;padding:9px 18px;font-size:13px;font-weight:600;cursor:pointer;box-shadow:var(--shadow-brand);font-family:inherit}
   .safety-pill.off{background:transparent;border:1px solid var(--border);color:var(--muted-fg);box-shadow:none}
   .dash-body{padding:18px 16px 20px}
@@ -262,7 +262,7 @@
     <!-- S6 · Dashboard — safe state -->
     <section class="screen dash" id="s6">
       <div class="dash-header">
-        <h1><span class="pulse-dot"></span>Cross<span class="brand-gradient">Aware</span></h1>
+        <div class="h1"><span class="pulse-dot"></span>Cross<span class="brand-gradient">Aware</span></div>
         <button class="safety-pill">⏸ Safety ON</button>
       </div>
       <div class="dash-body">
@@ -298,7 +298,7 @@
     <!-- S7 · Dashboard — danger state -->
     <section class="screen dash" id="s7">
       <div class="dash-header">
-        <h1><span class="pulse-dot" id="pd7" style="background:var(--danger)"></span>Cross<span class="brand-gradient">Aware</span></h1>
+        <div class="h1"><span class="pulse-dot" id="pd7" style="background:var(--danger)"></span>Cross<span class="brand-gradient">Aware</span></div>
         <button class="safety-pill">⏸ Safety ON</button>
       </div>
       <div class="dash-body">
