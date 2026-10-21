@@ -23,6 +23,6 @@ Programme: participant in Urban Mobility Incubator 2026 (https://www.urbanmobili
 - Planned (not available): lowering call volume near danger zones.
 - Core mechanism: Android geofencing; about 15 metres before a danger zone, media volume is lowered to about 20% (not paused) and a short spoken "Be aware!" (English) plays; volume is restored on exit. Alerts are suppressed at vehicle speed.
 - Planned (not available): features for parents, hazard reporting from the app, more cities. No dates.
-- Coverage: Riga, Latvia. Danger zones (railway crossings, tram crossings, dangerous intersections) are based on OpenStreetMap data.
+- Coverage: Riga, Latvia. Danger zones (railway crossings, tram crossings and stops, pedestrian crossings, dangerous intersections) are based on OpenStreetMap data.
 - Pricing: free during beta. Paid plans are not yet available.
 - Data privacy: continuous location is processed on-device only. The server stores only zone entry/exit events, without coordinates, and deletes them after 90 days.
