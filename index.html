@@ -34,7 +34,7 @@
     --dark2: #0D1424;
     --dark3: #111827;
     --text: #F9FAFB;
-    --muted: #6B7280;
+    --muted: #8B93A1; /* was #6B7280; 4.5:1+ on all dark surfaces (WCAG AA) */
     --border: rgba(255,255,255,0.07);
   }
 
@@ -153,7 +153,7 @@
   }
 
   .parent-feature h4 { font-size: 14px; font-weight: 600; margin-bottom: 4px; }
-  .parent-feature p  { font-size: 13px; color: #6B7280; line-height: 1.55; }
+  .parent-feature p  { font-size: 13px; color: var(--muted); line-height: 1.55; }
 
   /* Age banner */
   .age-banner {
@@ -174,12 +174,12 @@
   .age-item { text-align: center; padding: 0 16px; }
   .age-icon { font-size: 32px; margin-bottom: 8px; }
   .age-label { font-family: 'Syne', sans-serif; font-size: 15px; font-weight: 700; margin-bottom: 6px; }
-  .age-desc  { font-size: 12px; color: #6B7280; line-height: 1.5; }
+  .age-desc  { font-size: 12px; color: var(--muted); line-height: 1.5; }
   .age-divider { width: 1px; height: 80px; background: rgba(255,255,255,0.07); }
 
   /* ── Language switcher ── */
   .lang-switcher { display:flex; background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.07); border-radius:100px; padding:3px; gap:2px; }
-  .lang-btn { padding:10px 16px; min-height:44px; border:none; border-radius:100px; background:transparent; color:#6B7280; font-family:'DM Sans',sans-serif; font-size:13px; font-weight:600; cursor:pointer; transition:all 0.2s; letter-spacing:0.03em; }
+  .lang-btn { padding:10px 16px; min-height:44px; border:none; border-radius:100px; background:transparent; color:var(--muted); font-family:'DM Sans',sans-serif; font-size:13px; font-weight:600; cursor:pointer; transition:all 0.2s; letter-spacing:0.03em; }
   .lang-btn.active { background:#2563EB; color:#fff; box-shadow:0 2px 8px rgba(37,99,235,0.35); }
   .lang-btn:hover:not(.active) { color:#fff; }
 
@@ -350,7 +350,7 @@
   @keyframes bar-dance { from { transform: scaleY(1); } to { transform: scaleY(0.3); } }
   .sound-card-body { padding: 16px 24px 24px; }
   .sound-card-body h3 { font-family: 'Syne', sans-serif; font-size: 17px; font-weight: 700; margin-bottom: 6px; }
-  .sound-card-body p { font-size: 13px; color: #6B7280; line-height: 1.5; margin-bottom: 12px; }
+  .sound-card-body p { font-size: 13px; color: var(--muted); line-height: 1.5; margin-bottom: 12px; }
   .action-tag { display: inline-flex; align-items: center; gap: 5px; font-size: 12px; font-weight: 600; padding: 5px 12px; border-radius: 8px; }
   .pause-tag { background: rgba(16,185,129,0.12); color: var(--green); border: 1px solid rgba(16,185,129,0.25); }
   .lower-tag { background: rgba(245,158,11,0.12); color: var(--amber); border: 1px solid rgba(245,158,11,0.25); }
@@ -696,7 +696,7 @@
   @keyframes sim-pulse { from { scale: 1; opacity: 0.8; } to { scale: 1.6; opacity: 0; } }
 
   /* Media volume meter (20 % = the app's duck level) */
-  .phone-screen .speed-badge { white-space: nowrap; }
+  .phone-screen .speed-badge { white-space: nowrap; color: #60A5FA; }
   .sim-volume { display: inline-flex; align-items: center; gap: 6px; margin-left: auto; font-size: 11px; color: #D1D5DB; font-variant-numeric: tabular-nums; }
   .sim-vol-track { width: 54px; height: 6px; border-radius: 3px; background: rgba(255,255,255,0.12); overflow: hidden; }
   .sim-vol-fill { display: block; height: 100%; width: 100%; background: var(--green); transform-origin: left; transition: scale 0.6s ease, background-color 0.6s ease; }
@@ -913,7 +913,7 @@
     font-family: 'Syne', sans-serif;
     font-size: 72px;
     font-weight: 800;
-    color: rgba(37,99,235,0.12);
+    color: #4A6EAF; /* was rgba(37,99,235,0.12) = 1.1:1; large text needs 3:1 */
     line-height: 1;
     margin-bottom: 20px;
     user-select: none;
@@ -940,6 +940,7 @@
   }
 
   /* ── Problem section ── */
+  .problem-section .section-label { color: #60A5FA; } /* #3B82F6 is 4.47:1 on #0D1F3C */
   .problem-section {
     background: linear-gradient(135deg, #0A1628, #0D1F3C);
     border-top: 1px solid var(--border);
@@ -1644,7 +1645,7 @@
       <p style="color:#9CA3AF;font-size:14px;line-height:1.6;margin:0" data-i18n="faq_a7">We don't store your coordinates or your route. Your location is checked against danger zones on your phone; your coordinates are not sent to our servers. When you enter or leave a danger zone, we save the zone and the time to your account for 90 days, then delete them. You can export or delete this history in the app.</p>
     </div>
   </div>
-  <p style="color:#6B7280;font-size:12px;line-height:1.5;margin:24px auto 0;max-width:720px;text-align:center" data-i18n="tm_note">Life360, Findmykids, Pingo, Qustodio and Google Family Link are trademarks of their respective owners. CrossAware is not affiliated with, endorsed by or sponsored by them.</p>
+  <p style="color:var(--muted);font-size:12px;line-height:1.5;margin:24px auto 0;max-width:720px;text-align:center" data-i18n="tm_note">Life360, Findmykids, Pingo, Qustodio and Google Family Link are trademarks of their respective owners. CrossAware is not affiliated with, endorsed by or sponsored by them.</p>
 </section>
 
 <!-- Final CTA -->
@@ -1823,7 +1824,7 @@
     CrossAware
   </div>
   <div class="footer-note" data-i18n="footer_copy">© 2026 CrossAware. Made in Riga 🇱🇻</div>
-  <div style="font-size:12px;color:rgba(255,255,255,0.3);text-align:center;margin-top:6px;">All rights reserved to SIA "DAGAR" · <a href="mailto:hello@crossaware.com" style="color:rgba(255,255,255,0.4);text-decoration:none;display:inline-block;padding:12px 6px;margin:-12px -6px;">hello@crossaware.com</a></div>
+  <div style="font-size:12px;color:rgba(255,255,255,0.5);text-align:center;margin-top:6px;">All rights reserved to SIA "DAGAR" · <a href="mailto:hello@crossaware.com" style="color:rgba(255,255,255,0.6);text-decoration:none;display:inline-block;padding:12px 6px;margin:-12px -6px;">hello@crossaware.com</a></div>
   <div class="footer-links">
     <a href="/privacy.html" data-i18n="footer_privacy">Privacy</a>
     <a href="/terms.html" data-i18n="footer_terms">Terms</a>
@@ -1837,18 +1838,18 @@
     <button id="contactClose" aria-label="Close" onclick="closeContact()" style="position:absolute;top:16px;right:20px;background:none;border:none;color:rgba(255,255,255,0.4);font-size:22px;cursor:pointer;">✕</button>
     <div style="font-size:36px;margin-bottom:16px;">👋</div>
     <h3 id="contactTitle" style="color:#fff;font-size:22px;font-weight:700;margin-bottom:8px;letter-spacing:-0.5px;" data-i18n="contact_title">Get in touch</h3>
-    <p style="color:rgba(255,255,255,0.45);font-size:14px;margin-bottom:28px;line-height:1.6;" data-i18n="contact_sub">We're happy to answer any questions about CrossAware.</p>
+    <p style="color:rgba(255,255,255,0.6);font-size:14px;margin-bottom:28px;line-height:1.6;" data-i18n="contact_sub">We're happy to answer any questions about CrossAware.</p>
     <a href="mailto:hello@crossaware.com" style="display:flex;align-items:center;gap:14px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:12px;padding:16px 20px;text-decoration:none;margin-bottom:12px;transition:background 0.2s;" onmouseover="this.style.background='rgba(255,255,255,0.1)'" onmouseout="this.style.background='rgba(255,255,255,0.06)'">
       <span style="font-size:22px;">✉️</span>
       <div style="text-align:left;">
-        <div style="font-size:11px;color:rgba(255,255,255,0.35);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:2px;">E-mail</div>
+        <div style="font-size:11px;color:rgba(255,255,255,0.6);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:2px;">E-mail</div>
         <div style="color:#fff;font-size:15px;font-weight:500;">hello@crossaware.com</div>
       </div>
     </a>
     <a href="tel:+37129185303" style="display:flex;align-items:center;gap:14px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:12px;padding:16px 20px;text-decoration:none;transition:background 0.2s;" onmouseover="this.style.background='rgba(255,255,255,0.1)'" onmouseout="this.style.background='rgba(255,255,255,0.06)'">
       <span style="font-size:22px;">📞</span>
       <div style="text-align:left;">
-        <div style="font-size:11px;color:rgba(255,255,255,0.35);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:2px;" data-i18n="contact_phone">Phone</div>
+        <div style="font-size:11px;color:rgba(255,255,255,0.6);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:2px;" data-i18n="contact_phone">Phone</div>
         <div style="color:#fff;font-size:15px;font-weight:500;">+371 29 185 303</div>
       </div>
     </a>
