@@ -10,7 +10,6 @@ Programme: participant in Urban Mobility Incubator 2026 (https://www.urbanmobili
 
 ## Product
 - [Homepage](https://crossaware.com): Product overview, how it works, FAQ.
-- [Interactive Prototype](https://crossaware.com/prototype.html): Clickable demo of the onboarding and danger-zone alert flow.
 - [Privacy Policy](https://crossaware.com/privacy.html): What data CrossAware collects and how it is protected.
 - [Terms of Service](https://crossaware.com/terms.html): Service terms and safety disclaimer.
 - [Privātuma politika](https://crossaware.com/lv/privacy.html): Privacy Policy in Latvian.
