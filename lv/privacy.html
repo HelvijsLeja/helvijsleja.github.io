@@ -22,36 +22,38 @@
 <meta name="twitter:title" content="Privātuma politika — CrossAware">
 <meta name="twitter:description" content="Kā CrossAware apstrādā tavus datus: atrašanās vieta tiek apstrādāta ierīcē, zonu vēsture tiek glabāta 90 dienas, un tu to vari eksportēt vai dzēst lietotnē.">
 <meta name="twitter:image" content="https://crossaware.com/og-image.png">
+<link rel="preload" href="/fonts/syne-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/dm-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link href="/fonts/fonts.css" rel="stylesheet">
 <style>
   :root{--navy:#0D1B2A;--navy2:#0A1521;--teal:#00C9A7;--blue:#2563EB;--muted:#9CA3AF;--dim:#8B93A1;--border:rgba(255,255,255,0.1)}
   *{margin:0;padding:0;box-sizing:border-box}
-  body{background:var(--navy2);color:#E5E7EB;font-family:'DM Sans',sans-serif;font-size:16px;line-height:1.75}
+  body{background:var(--navy2);color:#E5E7EB;font-family:var(--font-body);font-size:var(--fs-body);line-height:var(--lh-relaxed)}
   nav{display:flex;align-items:center;justify-content:space-between;padding:20px 24px;max-width:860px;margin:0 auto}
-  .logo{display:flex;align-items:center;gap:8px;font-family:'Syne',sans-serif;font-weight:800;font-size:19px;color:#fff;text-decoration:none}
+  .logo{display:flex;align-items:center;gap:8px;font-family:var(--font-display);font-weight:var(--fw-black);font-size:19px;color:#fff;text-decoration:none}
   .logo .dot{width:8px;height:8px;border-radius:50%;background:var(--teal)}
-  nav a.back{color:var(--teal);text-decoration:none;font-size:14px;padding:10px 16px;border:1px solid rgba(0,201,167,0.3);border-radius:100px}
+  nav a.back{color:var(--teal);text-decoration:none;font-size:var(--fs-body-sm);padding:10px 16px;border:1px solid rgba(0,201,167,0.3);border-radius:100px}
   main{max-width:760px;margin:0 auto;padding:24px 24px 80px}
-  h1{font-family:'Syne',sans-serif;font-size:clamp(28px,5vw,38px);font-weight:800;color:#fff;letter-spacing:-0.02em;margin:24px 0 8px}
-  .meta{color:var(--dim);font-size:14px;margin-bottom:36px}
-  .lang{font-size:14px;margin:0}
+  h1{font-family:var(--font-display);font-size:var(--fs-h1-doc);font-weight:var(--fw-black);line-height:var(--lh-heading);color:#fff;letter-spacing:var(--ls-display);margin:24px 0 8px}
+  .meta{color:var(--dim);font-size:var(--fs-body-sm);margin-bottom:36px}
+  .lang{font-size:var(--fs-body-sm);margin:0}
   .tldr{background:rgba(0,201,167,0.08);border:1px solid rgba(0,201,167,0.3);border-radius:16px;padding:20px 22px;margin-bottom:36px}
   .tldr b{color:var(--teal)}
-  h2{font-family:'Syne',sans-serif;font-size:21px;font-weight:700;color:#fff;margin:36px 0 12px}
+  h2{font-family:var(--font-display);font-size:var(--fs-h3);font-weight:var(--fw-bold);line-height:var(--lh-snug);color:#fff;margin:36px 0 12px}
   p{color:var(--muted);margin-bottom:14px}
   ul{margin:0 0 14px 22px;color:var(--muted)}
   li{margin-bottom:8px}
   b,strong{color:#D1D5DB}
   a{color:var(--teal)}
-  table{width:100%;border-collapse:collapse;margin:16px 0 20px;font-size:14px}
+  table{width:100%;border-collapse:collapse;margin:16px 0 20px;font-size:var(--fs-body-sm)}
   th{background:rgba(255,255,255,0.06);color:#fff;text-align:left;padding:10px 12px;border:1px solid var(--border)}
   td{padding:10px 12px;border:1px solid var(--border);color:var(--muted);vertical-align:top}
   .warn{background:rgba(239,68,68,0.08);border:1px solid rgba(239,68,68,0.4);border-radius:16px;padding:20px 22px;margin:20px 0}
   .warn b{color:#FCA5A5}
-  footer{border-top:1px solid var(--border);padding:24px;text-align:center;color:var(--dim);font-size:13px}
+  footer{border-top:1px solid var(--border);padding:24px;text-align:center;color:var(--dim);font-size:var(--fs-small)}
   footer a{color:var(--dim)}
   .tscroll{overflow-x:auto}
-  @media(max-width:640px){table{font-size:12.5px;min-width:560px}th,td{padding:8px}}
+  @media(max-width:640px){table{font-size:var(--fs-xs);min-width:560px}th,td{padding:8px}}
 </style>
 
 </head>
