@@ -1138,6 +1138,10 @@
     font-size: var(--fs-small);
   }
 
+  .footer-pp { flex-basis: 100%; font-size: var(--fs-small); } /* own row in the wrapping footer */
+  .footer-pp a { color: var(--muted); text-decoration: underline; text-underline-offset: 3px; display: inline-block; padding: 8px 0; margin: -8px 0; }
+  .footer-pp a:hover { color: #fff; }
+
   .footer-links {
     display: flex;
     gap: 24px;
@@ -1638,6 +1642,10 @@
       <h3 style="font-size:var(--fs-h4);line-height:var(--lh-snug);margin-bottom:8px" data-i18n="faq_q7">Does CrossAware store my location?</h3>
       <p style="color:#9CA3AF;font-size:var(--fs-body-sm);line-height:var(--lh-body);margin:0" data-i18n="faq_a7">We don't store your coordinates or your route. Your location is checked against danger zones on your phone; your coordinates are not sent to our servers. When you enter or leave a danger zone, we save the zone and the time to your account for 90 days, then delete them. You can export or delete this history in the app.</p>
     </div>
+    <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);border-radius:16px;padding:20px 22px">
+      <h3 style="font-size:var(--fs-h4);line-height:var(--lh-snug);margin-bottom:8px" data-i18n="faq_q8">Is there a version for micromobility fleets?</h3>
+      <p style="color:#9CA3AF;font-size:var(--fs-body-sm);line-height:var(--lh-body);margin:0" data-i18n="faq_a8">Yes, as a separate product. Pause &amp; Pass is made by the same company, SIA "DAGAR", for scooter- and bike-share operators. It uses the same public danger-zone map as CrossAware, built from OpenStreetMap; the map holds places only, with no personal data. Your CrossAware account, location and zone-event history are not used for Pause &amp; Pass and are not shared with any operator. CrossAware remains an app for pedestrians and cyclists, free during the Android beta.</p>
+    </div>
   </div>
   <p style="color:var(--muted);font-size:var(--fs-xs);line-height:var(--lh-body);margin:24px auto 0;max-width:720px;text-align:center" data-i18n="tm_note">Life360, Findmykids, Pingo, Qustodio and Google Family Link are trademarks of their respective owners. CrossAware is not affiliated with, endorsed by or sponsored by them.</p>
 </section>
@@ -1673,17 +1681,27 @@
   "@type": "Organization",
   "@id": "https://crossaware.com/#organization",
   "name": "CrossAware",
-  "url": "https://crossaware.com",
+  "url": "https://crossaware.com/",
+  "description": "CrossAware is an app for pedestrians and cyclists in Riga (Android beta) by SIA \"DAGAR\", which also makes Pause & Pass, an audio-safety plugin for micromobility operators.",
   "logo": "https://crossaware.com/og-image.png",
   "email": "hello@crossaware.com",
   "foundingLocation": {
     "@type": "Place",
     "name": "Riga, Latvia"
   },
-  "parentOrganization": {
-    "@type": "Organization",
-    "name": "SIA \"DAGAR\""
-  }
+  "parentOrganization": { "@id": "https://dagar.lv/#organization" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://dagar.lv/#organization",
+  "name": "SIA \"DAGAR\"",
+  "legalName": "SIA DAGAR",
+  "url": "https://dagar.lv/",
+  "identifier": { "@type": "PropertyValue", "propertyID": "LV Register of Enterprises", "value": "40103579673" },
+  "address": { "@type": "PostalAddress", "streetAddress": "Silciema iela 15 k-2 – 40", "addressLocality": "Rīga", "postalCode": "LV-1024", "addressCountry": "LV" }
 }
 </script>
 <script type="application/ld+json">
@@ -1759,6 +1777,14 @@
         "@type": "Answer",
         "text": "We don't store your coordinates or your route. Your location is checked against danger zones on your phone; your coordinates are not sent to our servers. When you enter or leave a danger zone, we save the zone and the time to your account for 90 days, then delete them. You can export or delete this history in the app."
       }
+    },
+    {
+      "@type": "Question",
+      "name": "Is there a version for micromobility fleets?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, as a separate product. Pause & Pass is made by the same company, SIA \"DAGAR\", for scooter- and bike-share operators. It uses the same public danger-zone map as CrossAware, built from OpenStreetMap; the map holds places only, with no personal data. Your CrossAware account, location and zone-event history are not used for Pause & Pass and are not shared with any operator. CrossAware remains an app for pedestrians and cyclists, free during the Android beta."
+      }
     }
   ]
 }
@@ -1819,6 +1845,7 @@
   </div>
   <div class="footer-note" data-i18n="footer_copy">© 2026 CrossAware. Made in Riga 🇱🇻</div>
   <div style="font-size:var(--fs-xs);color:rgba(255,255,255,0.5);text-align:center;margin-top:6px;">All rights reserved to SIA "DAGAR" · <a href="mailto:hello@crossaware.com" style="color:rgba(255,255,255,0.6);text-decoration:none;display:inline-block;padding:12px 6px;margin:-12px -6px;">hello@crossaware.com</a></div>
+  <div class="footer-pp"><a href="https://pauseandpass.com/" data-i18n="footer_pp">For micromobility operators: Pause &amp; Pass →</a></div>
   <div class="footer-links">
     <a href="/privacy.html" data-i18n="footer_privacy">Privacy</a>
     <a href="/terms.html" data-i18n="footer_terms">Terms</a>
@@ -1889,6 +1916,9 @@
       faq_a6: "Not yet. CrossAware is in Android beta with testers in Riga. An iPhone version is planned.",
       faq_q7: "Does CrossAware store my location?",
       faq_a7: "We don't store your coordinates or your route. Your location is checked against danger zones on your phone; your coordinates are not sent to our servers. When you enter or leave a danger zone, we save the zone and the time to your account for 90 days, then delete them. You can export or delete this history in the app.",
+      faq_q8: "Is there a version for micromobility fleets?",
+      faq_a8: "Yes, as a separate product. Pause & Pass is made by the same company, SIA \"DAGAR\", for scooter- and bike-share operators. It uses the same public danger-zone map as CrossAware, built from OpenStreetMap; the map holds places only, with no personal data. Your CrossAware account, location and zone-event history are not used for Pause & Pass and are not shared with any operator. CrossAware remains an app for pedestrians and cyclists, free during the Android beta.",
+      footer_pp: "For micromobility operators: Pause & Pass →",
       nav_cta: "Join Android beta",
       hero_badge: "Android beta testing now · iOS planned · Riga, Latvia",
       hero_h1a: "Hear. Cross.",
@@ -2021,6 +2051,9 @@
       faq_a6: "Vēl nav. CrossAware ir Android beta versijā ar testētājiem Rīgā. iPhone versija ir plānota.",
       faq_q7: "Vai CrossAware glabā manu atrašanās vietu?",
       faq_a7: "Mēs neglabājam tavas koordinātas vai maršrutu. Tava atrašanās vieta tiek salīdzināta ar bīstamajām zonām tavā tālrunī; tavas koordinātas netiek sūtītas uz mūsu serveriem. Kad ieej bīstamā zonā vai izej no tās, tavā kontā uz 90 dienām saglabājam zonu un laiku, pēc tam to dzēšam. Šo vēsturi lietotnē vari eksportēt vai dzēst.",
+      faq_q8: "Vai ir versija mikromobilitātes flotēm?",
+      faq_a8: "Jā, kā atsevišķs produkts. Pause & Pass veido tas pats uzņēmums, SIA „DAGAR”, skrejriteņu un velosipēdu koplietošanas operatoriem. Tas izmanto to pašu publisko bīstamo zonu karti, ko CrossAware: tā veidota no OpenStreetMap datiem un satur tikai vietas, bez personas datiem. Tavs CrossAware konts, atrašanās vieta un zonu notikumu vēsture netiek izmantoti Pause & Pass vajadzībām un netiek nodoti nevienam operatoram. CrossAware paliek lietotne gājējiem un velosipēdistiem, un Android beta laikā tā ir bez maksas.",
+      footer_pp: "Mikromobilitātes operatoriem: Pause & Pass →",
       nav_cta: "Pieteikties Android beta testam",
       hero_badge: "Android beta testēšanā · iOS plānots · Rīga, Latvija",
       hero_h1a: "Sadzirdi. Šķērso.",
