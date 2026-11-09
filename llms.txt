@@ -18,7 +18,7 @@ Programme: participant in Urban Mobility Incubator 2026 (https://www.urbanmobili
 - [Delete your account](https://crossaware.com/delete-account.html): How to request account deletion and what data is deleted (English and Latvian).
 
 ## Key facts
-- Status: Android beta, currently with testers. Not yet public on Google Play. iOS is in development and not yet released.
+- Status: Android beta, currently with testers. Not yet public on Google Play. iOS is planned and not yet released.
 - What it controls: media audio only (music, podcasts, audiobooks, video, game audio). It does not control phone calls, video calls or meeting apps, and it does not mute the microphone.
 - Planned (not available): lowering call volume near danger zones.
 - Core mechanism: Android geofencing; about 15 metres before a danger zone, media volume is lowered to about 20% (not paused) and a short spoken warning plays: "Uzmanību!" if the device language is Latvian and a Latvian text-to-speech voice is installed, otherwise "Be aware!" in English; volume is restored on exit. Alerts are suppressed at vehicle speed.
