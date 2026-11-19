@@ -1,8 +1,8 @@
 # CrossAware
 
-> CrossAware is a personal safety app for pedestrians and cyclists. It automatically lowers media volume (music, podcasts, video, game audio) and plays a short spoken warning when the user approaches a mapped danger zone (danger zones: rail crossings, tram crossings and pedestrian crossings), then restores the volume once they are clear. Danger-zone detection runs on-device; no GPS coordinates are sent to CrossAware's servers.
+> CrossAware is an app for pedestrians and cyclists. It automatically lowers media volume (music, podcasts, video, game audio) and plays a short spoken warning when the user approaches a mapped danger zone (danger zones: rail crossings, tram crossings and pedestrian crossings), then restores the volume after the user leaves the zone. Danger-zone detection runs on-device; no GPS coordinates are sent to CrossAware's servers. CrossAware is an aid, not a guarantee: alerts can be late or missed, and users should always look and listen themselves.
 
-CrossAware is not a family location-tracking replacement for apps like Life360. It is designed to complement location-sharing apps by adding automatic audio safety that location sharing alone does not provide.
+CrossAware is not a family location-tracking replacement for apps like Life360. It is designed to complement location-sharing apps by adding automatic audio alerts near danger zones, which location sharing alone does not provide.
 
 Company: SIA "DAGAR", Riga, Latvia.
 Related product: Pause & Pass (https://pauseandpass.com), a separate audio-safety plugin for scooter- and bike-share operators, made by the same company, SIA "DAGAR". Both use the same Riga danger-zone map built from OpenStreetMap. CrossAware users' data is not used in Pause & Pass.
@@ -21,7 +21,10 @@ Programme: participant in Urban Mobility Incubator 2026 (https://www.urbanmobili
 - Status: Android beta, currently with testers. Not yet public on Google Play. iOS is planned and not yet released.
 - What it controls: media audio only (music, podcasts, audiobooks, video, game audio). It does not control phone calls, video calls or meeting apps, and it does not mute the microphone.
 - Planned (not available): lowering call volume near danger zones.
-- Core mechanism: Android geofencing; about 15 metres before a danger zone, media volume is lowered to about 20% (not paused) and a short spoken warning plays: "Uzmanību!" if the device language is Latvian and a Latvian text-to-speech voice is installed, otherwise "Be aware!" in English; volume is restored on exit. Alerts are suppressed at vehicle speed.
+- Core mechanism: Android geofencing; about 15 metres before a danger zone, media volume is lowered to about 20% (not paused) and a short spoken warning plays: "Uzmanību!" if the app language is Latvian and a Latvian text-to-speech voice is installed, otherwise "Be aware!" in English; volume is restored on exit with the notification "You left the danger zone". Zone monitoring is turned on and off with a Start / Stop button; while it runs, Android shows the persistent notification "CrossAware zone monitoring".
+- Movement modes: the user chooses in which modes to get alerts: Walking, Bike or scooter, Vehicle. Vehicle is off by default. The mode is estimated on the phone from GPS speed; a sustained speed over 35 km/h for more than 30 seconds counts as Vehicle, also on a bike or scooter. GPS speed can be wrong; if the mode is unclear, modes do not silence alerts. Speed readings (speed and time, no coordinates, about the last minute) stay on the phone and are not sent to CrossAware.
+- Languages: the whole app, its notifications and the spoken warning are in Latvian or English (chosen in onboarding or Settings). Website: English and Latvian.
+- Map: Riga danger-zone map with a filter by zone type (railway, tram, intersection) and a button that shows the user's location.
 - Planned (not available): features for parents, hazard reporting from the app, more cities. No dates.
 - Coverage: Riga, Latvia. Danger zones (railway crossings, tram crossings and stops, pedestrian crossings, dangerous intersections) are based on OpenStreetMap data.
 - Pricing: free during beta. Paid plans are not yet available.
